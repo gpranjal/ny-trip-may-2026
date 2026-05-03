@@ -546,12 +546,13 @@
   /* Day visual — postcard-style image stack */
   .day-visual {
     position: relative;
-    aspect-ratio: 4 / 5;
+    width: 100%;
+    aspect-ratio: 4 / 3;
     max-width: 480px;
     margin: 0 auto;
   }
   @media (min-width: 880px) {
-    .day-visual { max-width: none; }
+    .day-visual { max-width: none; aspect-ratio: 4 / 5; }
   }
   .postcard {
     position: absolute;
