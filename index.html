@@ -1,0 +1,1642 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>NY State Parks Loop — A Family Itinerary, May 2026</title>
+<meta name="description" content="A five-day editorial guide to a family loop through the parks, gorges, castles and mountains of upstate New York." />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="googlebot" content="noindex, nofollow" />
+<meta property="og:title" content="NY State Parks Loop — May 2026" />
+<meta property="og:description" content="A five-day family itinerary, verified and dated 2026-05-03." />
+<meta property="og:type" content="article" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://upload.wikimedia.org" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&display=swap" />
+
+<style>
+  :root {
+    /* Paper & ink */
+    --paper:        #f4eeda;
+    --paper-soft:   #f8f3e1;
+    --paper-deep:   #e9dfc4;
+    --ink:          #1a1410;
+    --ink-soft:     #4a3d31;
+    --ink-muted:    #8a7a64;
+    --rule:         #c9bda0;
+
+    /* Editorial palette */
+    --forest:       #2c4636;
+    --forest-deep:  #18271e;
+    --sienna:       #b15535;
+    --sienna-deep:  #8a3d24;
+    --gold:         #b58a3a;
+    --slate:        #5a7282;
+    --plum:         #5b3a4a;
+    --rust:         #843521;
+    --moss:         #6b7d5a;
+    --cream-card:   #faf6e7;
+
+    /* Day theming */
+    --d1: var(--sienna);     /* Ithaca, falls */
+    --d2: var(--forest);     /* Parks day */
+    --d3: var(--slate);      /* Thousand Islands waters */
+    --d4: var(--plum);       /* Adirondack mountains */
+    --d5: var(--rust);       /* Drive home */
+
+    /* Typography */
+    --display: 'Fraunces', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+    --body:    'Newsreader', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+
+    /* Layout */
+    --gutter:   clamp(20px, 4vw, 48px);
+    --maxw:     1280px;
+    --maxw-text: 720px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--body);
+    font-weight: 400;
+    font-size: 1.0625rem;
+    line-height: 1.62;
+    color: var(--ink);
+    background: var(--paper);
+    background-image:
+      radial-gradient(ellipse at 20% 0%, rgba(255,250,235,0.6), transparent 55%),
+      radial-gradient(ellipse at 90% 30%, rgba(181,138,58,0.06), transparent 50%),
+      radial-gradient(ellipse at 0% 80%, rgba(44,70,54,0.04), transparent 45%);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1, 'onum' 1;
+    overflow-x: hidden;
+  }
+
+  /* Subtle paper grain via SVG noise */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.55;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.6 0 0 0 0 0.5 0 0 0 0 0.4 0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+
+  header, main, footer { position: relative; z-index: 2; }
+
+  ::selection { background: var(--sienna); color: var(--paper-soft); }
+
+  a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 1px;
+    transition: color 0.25s ease, border-color 0.25s ease, opacity 0.25s ease;
+  }
+  a:hover { color: var(--sienna); border-color: var(--sienna); }
+
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
+  .wrap-text { max-width: var(--maxw-text); margin: 0 auto; padding: 0 var(--gutter); }
+
+  /* Animation */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes drawLine {
+    from { stroke-dashoffset: var(--len, 1500); }
+    to   { stroke-dashoffset: 0; }
+  }
+  @keyframes inkBleed {
+    from { opacity: 0; filter: blur(4px); }
+    to   { opacity: 1; filter: blur(0); }
+  }
+  .reveal { animation: fadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+  /* ========================================== */
+  /* MASTHEAD                                   */
+  /* ========================================== */
+  .masthead {
+    border-bottom: 2px solid var(--ink);
+    padding: 1rem 0 0.875rem;
+    background: var(--paper-soft);
+  }
+  .masthead .wrap {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: baseline;
+    gap: 1.5rem;
+  }
+  .mast-issue, .mast-date {
+    font-family: var(--display);
+    font-variation-settings: 'opsz' 11, 'SOFT' 100, 'wght' 600;
+    font-size: 0.6875rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  .mast-date { text-align: right; }
+  .mast-center {
+    font-family: var(--display);
+    font-style: italic;
+    font-variation-settings: 'opsz' 14, 'wght' 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    color: var(--ink-soft);
+    text-align: center;
+  }
+  .masthead-rule {
+    height: 4px;
+    background:
+      linear-gradient(to right, var(--ink) 0%, var(--ink) 100%),
+      linear-gradient(to right, var(--ink) 0%, var(--ink) 100%);
+    background-size: 100% 1px, 100% 1px;
+    background-position: top left, bottom left;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border-bottom: none;
+  }
+
+  /* ========================================== */
+  /* HERO                                       */
+  /* ========================================== */
+  .hero {
+    padding: clamp(3.5rem, 9vw, 7.5rem) 0 clamp(2.5rem, 6vw, 5rem);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero .wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .eyebrow {
+    font-family: var(--display);
+    font-variation-settings: 'opsz' 11, 'SOFT' 100, 'wght' 500;
+    font-size: 0.7rem;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    color: var(--sienna);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.875rem;
+  }
+  .eyebrow::before, .eyebrow::after {
+    content: '';
+    height: 1px;
+    width: 32px;
+    background: currentColor;
+  }
+  .eyebrow.no-flank::before, .eyebrow.no-flank::after { display: none; }
+
+  .hero h1 {
+    font-family: var(--display);
+    font-variation-settings: 'opsz' 144, 'SOFT' 30, 'wght' 320;
+    font-size: clamp(2.75rem, 9vw, 7.25rem);
+    line-height: 0.92;
+    letter-spacing: -0.035em;
+    color: var(--ink);
+    max-width: 14ch;
+    animation: fadeUp 1.1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .hero h1 em {
+    font-style: italic;
+    font-variation-settings: 'opsz' 144, 'SOFT' 80, 'wght' 320;
+    color: var(--forest);
+  }
+  .hero h1 .amp {
+    font-style: italic;
+    color: var(--sienna);
+    font-variation-settings: 'opsz' 144, 'SOFT' 100, 'wght' 360;
+    font-size: 0.85em;
+  }
+
+  .hero .lede {
+    font-family: var(--body);
+    font-style: italic;
+    font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+    line-height: 1.5;
+    color: var(--ink-soft);
+    max-width: 38ch;
+    margin-top: 1.5rem;
+    animation: fadeUp 1.2s 0.15s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .hero .lede strong {
+    font-style: normal;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem 2.5rem;
+    margin-top: 1.75rem;
+    font-family: var(--display);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    animation: fadeUp 1.2s 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .hero-meta span { display: inline-flex; align-items: baseline; gap: 0.4em; }
+  .hero-meta b {
+    font-variation-settings: 'opsz' 11, 'SOFT' 100, 'wght' 700;
+    color: var(--ink);
+    letter-spacing: 0.18em;
+  }
+
+  .verify-stamp {
+    position: absolute;
+    top: 5rem;
+    right: var(--gutter);
+    width: 130px;
+    height: 130px;
+    transform: rotate(-12deg);
+    opacity: 0.95;
+    animation: inkBleed 1.5s 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+    pointer-events: none;
+  }
+
+  @media (max-width: 720px) {
+    .verify-stamp { width: 95px; height: 95px; top: 2rem; right: 1rem; }
+  }
+
+  /* ========================================== */
+  /* FIGURES (quick stats)                      */
+  /* ========================================== */
+  .figures {
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 1.75rem 0;
+    background: var(--paper-soft);
+  }
+  .figures .wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 2rem;
+  }
+  @media (min-width: 740px) {
+    .figures .wrap { grid-template-columns: repeat(4, 1fr); }
+  }
+  .fig {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding-left: 1rem;
+    border-left: 1px solid var(--rule);
+  }
+  .fig:first-child { border-left: none; padding-left: 0; }
+  @media (max-width: 740px) {
+    .fig { padding-left: 0; border-left: none; }
+    .fig:nth-child(odd) { border-right: 1px solid var(--rule); padding-right: 1rem; }
+  }
+  .fig .l {
+    font-family: var(--display);
+    font-variation-settings: 'opsz' 11, 'SOFT' 100, 'wght' 500;
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .fig .n {
+    font-family: var(--display);
+    font-variation-settings: 'opsz' 60, 'SOFT' 50, 'wght' 350;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+  }
+  .fig .n .unit {
+    font-style: italic;
+    font-variation-settings: 'opsz' 24, 'SOFT' 100;
+    font-size: 0.6em;
+    color: var(--ink-soft);
+    margin-left: 0.1em;
+  }
+
+  /* ========================================== */
+  /* SECTION HEADERS                            */
+  /* ========================================== */
+  section.spread { padding: clamp(3.5rem, 7vw, 6rem) 0; }
+  .section-head { margin-bottom: clamp(2rem, 4vw, 3.5rem); display: grid; gap: 0.75rem; }
+  .section-head .eyebrow { color: var(--forest); }
+  .section-head h2 {
+    font-family: var(--display);
+    font-variation-settings: 'opsz' 96, 'SOFT' 50, 'wght' 350;
+    font-size: clamp(2rem, 5vw, 3.75rem);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    max-width: 18ch;
+  }
+  .section-head h2 em {
+    font-style: italic;
+    font-variation-settings: 'opsz' 96, 'SOFT' 80, 'wght' 350;
+    color: var(--forest);
+  }
+  .section-head .deck {
+    font-family: var(--body);
+    font-style: italic;
+    font-size: 1.075rem;
+    color: var(--ink-soft);
+    max-width: 56ch;
+  }
+
+  /* ========================================== */
+  /* MAP                                        */
+  /* ========================================== */
+  .map-section { background: var(--paper); }
+  .map-frame {
+    background: var(--paper-deep);
+    border: 1px solid var(--ink);
+    padding: clamp(1rem, 2vw, 2rem);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.5) inset,
+      0 0 0 8px var(--paper),
+      0 0 0 9px var(--ink),
+      0 30px 60px -20px rgba(28,22,18,0.25);
+    position: relative;
+  }
+  .map-frame svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+  /* SVG map: animated path drawing */
+  .map-route { stroke-dasharray: 1500; stroke-dashoffset: 1500; }
+  .reveal-map .map-route { animation: drawLine 3s 0.4s ease-in-out forwards; --len: 1500; }
+  .map-stop { animation: inkBleed 0.5s ease-out both; }
+
+  /* ========================================== */
+  /* DAYS — magazine articles                   */
+  /* ========================================== */
+  .days-section { background: var(--paper-soft); }
+  .day-article {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: clamp(2rem, 4vw, 3.5rem) 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: start;
+  }
+  .day-article:last-child { border-bottom: none; }
+
+  @media (min-width: 880px) {
+    .day-article {
+      grid-template-columns: 1.4fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+    .day-article.flip { grid-template-columns: 1fr 1.4fr; }
+    .day-article.flip .day-text { order: 2; }
+    .day-article.flip .day-visual { order: 1; }
+  }
+
+  .day-text { display: grid; gap: 1.25rem; align-content: start; }
+
+  .day-num {
+    font-family: var(--display);
+    font-variation-settings: 'opsz' 144, 'SOFT' 0, 'wght' 200;
+    font-size: clamp(5rem, 13vw, 9.5rem);
+    line-height: 0.85;
+    letter-spacing: -0.06em;
+    color: var(--ink);
+    display: block;
+    margin: -0.1em 0 0;
+  }
+  .day-1 .day-num { color: var(--d1); }
+  .day-2 .day-num { color: var(--d2); }
+  .day-3 .day-num { color: var(--d3); }
+  .day-4 .day-num { color: var(--d4); }
+  .day-5 .day-num { color: var(--d5); }
+
+  .day-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+    font-family: var(--display);
+    font-variation-settings: 'opsz' 11, 'SOFT' 100, 'wght' 500;
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 0.65rem 0;
+  }
+  .day-meta b {
+    font-variation-settings: 'opsz' 11, 'SOFT' 100, 'wght' 700;
+    color: var(--ink);
+  }
+
+  .day-headline {
+    font-family: var(--display);
+    font-variation-settings: 'opsz' 60, 'SOFT' 60, 'wght' 360;
+    font-size: clamp(1.5rem, 2.5vw, 2.125rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    max-width: 22ch;
+  }
+  .day-headline em {
+    font-style: italic;
+    color: var(--ink-soft);
+    font-variation-settings: 'opsz' 60, 'SOFT' 80, 'wght' 360;
+  }
+
+  .day-body {
+    font-family: var(--body);
+    font-size: 1.075rem;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    max-width: 56ch;
+  }
+  .day-body p + p { margin-top: 0.75em; }
+  .day-body strong { color: var(--ink); font-weight: 600; }
+
+  /* Drop cap on first paragraph */
+  .day-body .first-p::first-letter {
+    font-family: var(--display);
+    font-variation-settings: 'opsz' 144, 'SOFT' 30, 'wght' 350;
+    font-size: 4em;
+    line-height: 0.85;
+    float: left;
+    margin: 0.05em 0.12em 0 -0.04em;
+    color: var(--ink);
+  }
+  .day-1 .day-body .first-p::first-letter { color: var(--d1); }
+  .day-2 .day-body .first-p::first-letter { color: var(--d2); }
+  .day-3 .day-body .first-p::first-letter { color: var(--d3); }
+  .day-4 .day-body .first-p::first-letter { color: var(--d4); }
+  .day-5 .day-body .first-p::first-letter { color: var(--d5); }
+
+  .day-pull {
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding: 0.75rem 0;
+    font-family: var(--display);
+    font-variation-settings: 'opsz' 36, 'SOFT' 50, 'wght' 400;
+    font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+    letter-spacing: -0.005em;
+    color: var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+  }
+  .day-pull .label {
+    font-style: italic;
+    font-variation-settings: 'opsz' 24, 'SOFT' 100, 'wght' 400;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    flex: 0 0 auto;
+  }
+
+  .day-flag {
+    font-family: var(--body);
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--rust);
+    padding-left: 1.25rem;
+    border-left: 3px solid var(--rust);
+    background: linear-gradient(to right, rgba(132,53,33,0.04), transparent);
+  }
+
+  .day-stay {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-top: 1px dashed var(--rule);
+    padding-top: 0.85rem;
+    font-family: var(--display);
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+  }
+  .day-stay b {
+    font-variation-settings: 'opsz' 24, 'SOFT' 50, 'wght' 600;
+    color: var(--ink);
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.78rem;
+  }
+  .day-stay .place {
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--ink);
+  }
+
+  /* Day visual — postcard-style image stack */
+  .day-visual {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  @media (min-width: 880px) {
+    .day-visual { max-width: none; }
+  }
+  .postcard {
+    position: absolute;
+    inset: 0;
+    background: var(--cream-card);
+    padding: 14px 14px 48px;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.6) inset,
+      0 12px 32px -8px rgba(28,20,16,0.25),
+      0 2px 6px rgba(28,20,16,0.1);
+    overflow: hidden;
+  }
+  .postcard.tilt-r { transform: rotate(2deg); }
+  .postcard.tilt-l { transform: rotate(-2deg); }
+  .postcard img {
+    width: 100%;
+    height: 78%;
+    object-fit: cover;
+    display: block;
+    filter: contrast(1.05) saturate(0.95);
+  }
+  .postcard figcaption {
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    height: 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--display);
+    font-variation-settings: 'opsz' 11, 'SOFT' 100;
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    border-top: 1px solid var(--rule);
+    padding-top: 8px;
+  }
+  .postcard figcaption .stamp {
+    font-style: italic;
+    font-variation-settings: 'opsz' 24, 'SOFT' 100, 'wght' 500;
+    font-size: 0.6rem;
+    color: var(--sienna);
+    letter-spacing: 0.1em;
+    border: 1px solid currentColor;
+    padding: 1px 5px;
+  }
+
+  /* ========================================== */
+  /* PHOTO ESSAY                                */
+  /* ========================================== */
+  .essay { background: var(--paper-soft); }
+  .essay-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    grid-auto-flow: dense;
+  }
+  .essay-photo {
+    background: var(--cream-card);
+    padding: 8px 8px 32px;
+    box-shadow: 0 8px 24px -10px rgba(28,20,16,0.18), 0 1px 3px rgba(28,20,16,0.08);
+    position: relative;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .essay-photo:hover { transform: translateY(-4px) rotate(-0.5deg); }
+  .essay-photo img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; filter: contrast(1.05) saturate(0.95); }
+  .essay-photo figcaption {
+    position: absolute;
+    left: 8px; right: 8px; bottom: 8px;
+    height: 18px;
+    font-family: var(--body);
+    font-style: italic;
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    line-height: 1.2;
+  }
+  .essay-photo figcaption .num {
+    font-style: normal;
+    font-family: var(--display);
+    font-variation-settings: 'opsz' 11, 'SOFT' 100, 'wght' 600;
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sienna);
+    margin-right: 0.4em;
+  }
+
+  /* Asymmetric layout */
+  .essay-photo:nth-child(1) { grid-column: span 4; }
+  .essay-photo:nth-child(2) { grid-column: span 2; }
+  .essay-photo:nth-child(3) { grid-column: span 2; }
+  .essay-photo:nth-child(4) { grid-column: span 2; }
+  .essay-photo:nth-child(5) { grid-column: span 2; }
+  .essay-photo:nth-child(6) { grid-column: span 6; }
+  .essay-photo:nth-child(6) img { aspect-ratio: 16/6; }
+
+  @media (max-width: 740px) {
+    .essay-grid { grid-template-columns: 1fr 1fr; }
+    .essay-photo:nth-child(n) { grid-column: span 1; }
+    .essay-photo:nth-child(1) { grid-column: span 2; }
+    .essay-photo:nth-child(6) { grid-column: span 2; }
+    .essay-photo:nth-child(6) img { aspect-ratio: 16/9; }
+  }
+
+  /* ========================================== */
+  /* AGENDA — decisions + calls                 */
+  /* ========================================== */
+  .agenda { background: var(--paper); }
+  .agenda-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 880px) {
+    .agenda-grid { grid-template-columns: 1.2fr 1fr; gap: 3rem; }
+  }
+
+  .panel {
+    background: var(--cream-card);
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    border: 1px solid var(--rule);
+    position: relative;
+  }
+  .panel.dark {
+    background: var(--ink);
+    color: var(--paper-soft);
+    border-color: var(--ink);
+  }
+  .panel.dark a { color: var(--paper-soft); border-color: var(--paper-soft); }
+  .panel.dark a:hover { color: var(--gold); border-color: var(--gold); }
+  .panel.dark::before {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border: 1px solid rgba(244,238,218,0.18);
+    pointer-events: none;
+  }
+
+  .panel-eyebrow {
+    font-family: var(--display);
+    font-variation-settings: 'opsz' 11, 'SOFT' 100, 'wght' 600;
+    font-size: 0.7rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--sienna);
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .panel.dark .panel-eyebrow { color: var(--gold); }
+
+  .panel h3 {
+    font-family: var(--display);
+    font-variation-settings: 'opsz' 60, 'SOFT' 50, 'wght' 350;
+    font-size: clamp(1.5rem, 2.4vw, 2rem);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin-bottom: 1.5rem;
+    color: inherit;
+  }
+  .panel h3 em {
+    font-style: italic;
+    font-variation-settings: 'opsz' 60, 'SOFT' 80, 'wght' 350;
+    color: var(--sienna);
+  }
+  .panel.dark h3 em { color: var(--gold); }
+
+  .decision-list {
+    list-style: none;
+    counter-reset: dec;
+    display: grid;
+    gap: 1rem;
+  }
+  .decision-list li {
+    counter-increment: dec;
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dotted var(--rule);
+    align-items: baseline;
+  }
+  .decision-list li:last-child { border-bottom: none; padding-bottom: 0; }
+  .decision-list li::before {
+    content: counter(dec, decimal-leading-zero);
+    font-family: var(--display);
+    font-variation-settings: 'opsz' 36, 'SOFT' 50, 'wght' 350;
+    font-size: 1.5rem;
+    color: var(--sienna);
+    line-height: 1;
+  }
+  .decision-list .q {
+    font-family: var(--body);
+    font-size: 1.05rem;
+    line-height: 1.45;
+    color: var(--ink);
+  }
+  .decision-list .q b { font-weight: 600; }
+  .decision-list .q em { color: var(--ink-muted); font-style: italic; }
+
+  .call-list {
+    list-style: none;
+    display: grid;
+    gap: 1.25rem;
+  }
+  .call-list li {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(244,238,218,0.18);
+  }
+  .call-list li:last-child { border-bottom: none; }
+  .call-list .who {
+    font-family: var(--display);
+    font-variation-settings: 'opsz' 24, 'SOFT' 50, 'wght' 500;
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .call-list .num {
+    font-family: var(--display);
+    font-variation-settings: 'opsz' 96, 'SOFT' 30, 'wght' 350;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    letter-spacing: 0.02em;
+    color: var(--paper-soft);
+    line-height: 1;
+    font-feature-settings: 'tnum' 1;
+  }
+  .call-list .why {
+    font-family: var(--body);
+    font-style: italic;
+    font-size: 0.95rem;
+    color: rgba(244,238,218,0.65);
+    margin-top: 0.2rem;
+    line-height: 1.4;
+  }
+
+  /* ========================================== */
+  /* VERIFIED                                   */
+  /* ========================================== */
+  .verified { background: var(--paper-deep); }
+  .verified-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  @media (min-width: 880px) {
+    .verified-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
+  }
+  .v-col h3 {
+    font-family: var(--display);
+    font-variation-settings: 'opsz' 60, 'SOFT' 50, 'wght' 350;
+    font-size: 1.875rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+  }
+  .v-col.open h3 .marker { color: var(--forest); }
+  .v-col.closed h3 .marker { color: var(--rust); }
+  .v-col h3 .marker {
+    font-family: var(--display);
+    font-variation-settings: 'opsz' 96, 'SOFT' 50, 'wght' 350;
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  .v-col h3 .marker.glyph {
+    font-size: 1.875rem;
+    font-style: italic;
+  }
+
+  .v-list {
+    list-style: none;
+    display: grid;
+    gap: 1.1rem;
+    border-top: 1px solid var(--rule);
+    padding-top: 1.25rem;
+  }
+  .v-list li {
+    font-family: var(--body);
+    font-size: 1.025rem;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  .v-list li b { color: var(--ink); font-weight: 600; }
+  .v-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--forest);
+  }
+  .v-col.closed .v-list li::before { background: var(--rust); }
+
+  /* ========================================== */
+  /* CTA                                        */
+  /* ========================================== */
+  .cta-section {
+    text-align: center;
+    padding: clamp(3.5rem, 7vw, 6rem) 0;
+    background:
+      radial-gradient(ellipse at center, rgba(255,250,235,0.6), transparent 60%),
+      var(--paper);
+    border-top: 1px solid var(--rule);
+  }
+  .cta-section h2 {
+    font-family: var(--display);
+    font-variation-settings: 'opsz' 96, 'SOFT' 60, 'wght' 320;
+    font-size: clamp(2rem, 4.5vw, 3.25rem);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    max-width: 16ch;
+    margin: 0 auto 1rem;
+  }
+  .cta-section h2 em {
+    font-style: italic;
+    color: var(--sienna);
+    font-variation-settings: 'opsz' 96, 'SOFT' 80, 'wght' 320;
+  }
+  .cta-section .deck {
+    font-family: var(--body);
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+    max-width: 48ch;
+    margin: 0 auto 2.5rem;
+  }
+  .cta-row {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.95rem 1.5rem;
+    background: var(--ink);
+    color: var(--paper-soft);
+    border: 1px solid var(--ink);
+    font-family: var(--display);
+    font-variation-settings: 'opsz' 14, 'SOFT' 100, 'wght' 500;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    transition: all 0.25s ease;
+  }
+  .btn:hover {
+    background: var(--paper-soft);
+    color: var(--ink);
+    border-color: var(--ink);
+  }
+  .btn.ghost {
+    background: transparent;
+    color: var(--ink);
+  }
+  .btn.ghost:hover {
+    background: var(--ink);
+    color: var(--paper-soft);
+  }
+
+  /* ========================================== */
+  /* COLOPHON / FOOTER                          */
+  /* ========================================== */
+  footer.colophon {
+    border-top: 2px solid var(--ink);
+    padding: 3rem 0 4rem;
+    background: var(--paper-soft);
+  }
+  footer.colophon .wrap {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 740px) {
+    footer.colophon .wrap { grid-template-columns: 2fr 1fr; align-items: end; }
+  }
+  .colophon-text {
+    font-family: var(--body);
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 60ch;
+  }
+  .colophon-text strong {
+    font-style: normal;
+    font-family: var(--display);
+    font-variation-settings: 'opsz' 14, 'SOFT' 50, 'wght' 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .colophon-links {
+    text-align: right;
+    font-family: var(--display);
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+    line-height: 1.8;
+  }
+  .colophon-links a {
+    display: inline-block;
+    border-bottom: 1px solid var(--rule);
+  }
+  @media (max-width: 740px) {
+    .colophon-links { text-align: left; }
+  }
+
+  /* Decorative ornament */
+  .ornament {
+    text-align: center;
+    color: var(--sienna);
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 1.5rem;
+    letter-spacing: 0.5em;
+    padding: 1rem 0;
+    user-select: none;
+  }
+
+  /* PRINT */
+  @media print {
+    body { background: white; color: black; font-size: 11pt; }
+    body::before { display: none; }
+    .verify-stamp, .cta-section, footer .colophon-links { display: none; }
+    .map-frame { box-shadow: none; border: 1px solid black; }
+    section.spread { padding: 1rem 0; break-inside: avoid; }
+    .day-article { page-break-inside: avoid; }
+    .postcard, .essay-photo { box-shadow: none; }
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- =============== MASTHEAD =============== -->
+<header class="masthead">
+  <div class="wrap">
+    <span class="mast-issue">Vol. II · No. 01</span>
+    <span class="mast-center">A Family Itinerary</span>
+    <span class="mast-date">Verified MMXXVI · 05 · 03</span>
+  </div>
+</header>
+<div class="masthead-rule"></div>
+
+<main>
+
+<!-- =============== HERO =============== -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow no-flank reveal" style="animation-delay:.05s">A Five-Day Loop · Upstate New York</span>
+      <h1>
+        New&nbsp;York<br/>
+        State&nbsp;Parks<br/>
+        <em>Loop</em>
+      </h1>
+      <p class="lede">
+        Five days through the gorges, castles, mountains and mineral springs of upstate New York &mdash; calibrated for <strong>four adults, Gauri (8), and Vasu (2)</strong>, departing Marlborough on the Monday before Memorial Day.
+      </p>
+      <div class="hero-meta">
+        <span><b>May 18</b> &mdash; <b>May 22</b></span>
+        <span>Marlborough <span style="font-style:italic;color:var(--sienna)">to</span> Marlborough</span>
+        <span>Five Stops · One Loop</span>
+      </div>
+    </div>
+
+    <!-- Decorative verification stamp -->
+    <svg class="verify-stamp" viewBox="0 0 130 130" aria-hidden="true">
+      <defs>
+        <path id="circle-text" d="M 65,65 m -50,0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0"/>
+      </defs>
+      <circle cx="65" cy="65" r="58" fill="none" stroke="#b15535" stroke-width="1.5"/>
+      <circle cx="65" cy="65" r="50" fill="none" stroke="#b15535" stroke-width="0.5"/>
+      <circle cx="65" cy="65" r="32" fill="none" stroke="#b15535" stroke-width="0.5"/>
+      <text font-family="Fraunces, serif" font-size="9" letter-spacing="3" fill="#b15535" font-weight="600">
+        <textPath href="#circle-text" startOffset="0%">FACT-CHECKED · VERSION TWO · DATED MAY MMXXVI · </textPath>
+      </text>
+      <text x="65" y="60" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="13" fill="#b15535">verified</text>
+      <text x="65" y="78" text-anchor="middle" font-family="Fraunces, serif" font-size="11" font-weight="600" fill="#b15535" letter-spacing="2">2026·05·03</text>
+    </svg>
+  </div>
+</section>
+
+<!-- =============== FIGURES =============== -->
+<section class="figures" aria-label="Trip figures at a glance">
+  <div class="wrap">
+    <div class="fig">
+      <span class="l">Days</span>
+      <span class="n">5</span>
+    </div>
+    <div class="fig">
+      <span class="l">Total Drive</span>
+      <span class="n">~1,100<span class="unit">mi</span></span>
+    </div>
+    <div class="fig">
+      <span class="l">Time on Road</span>
+      <span class="n">~20<span class="unit">hr</span></span>
+    </div>
+    <div class="fig">
+      <span class="l">Estimated Cost</span>
+      <span class="n">$3,194</span>
+    </div>
+  </div>
+</section>
+
+<!-- =============== MAP =============== -->
+<section class="spread map-section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow no-flank">The Route</span>
+      <h2>A clockwise <em>circuit</em> through the parks of upstate.</h2>
+      <p class="deck">From the falls of Ithaca to the islands of the St. Lawrence, then west again through the Adirondacks and home by way of Saratoga's mineral springs.</p>
+    </div>
+
+    <div class="map-frame reveal-map">
+      <svg viewBox="0 0 1200 640" role="img" aria-label="Map showing the loop route through upstate New York with five overnight stops.">
+        <defs>
+          <!-- Compass star gradient -->
+          <linearGradient id="compass-grad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#b15535"/>
+            <stop offset="100%" stop-color="#8a3d24"/>
+          </linearGradient>
+          <!-- Hatch pattern for water -->
+          <pattern id="water-hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+            <line x1="0" y1="0" x2="0" y2="6" stroke="#5a7282" stroke-width="0.4" opacity="0.4"/>
+          </pattern>
+          <!-- Topographic dots -->
+          <pattern id="topo" patternUnits="userSpaceOnUse" width="14" height="14">
+            <circle cx="2" cy="2" r="0.4" fill="#8a7a64" opacity="0.35"/>
+          </pattern>
+          <filter id="ink-bleed">
+            <feGaussianBlur stdDeviation="0.4"/>
+          </filter>
+        </defs>
+
+        <!-- Background plate -->
+        <rect x="0" y="0" width="1200" height="640" fill="#f4eeda"/>
+        <rect x="0" y="0" width="1200" height="640" fill="url(#topo)"/>
+
+        <!-- Inner border -->
+        <rect x="20" y="20" width="1160" height="600" fill="none" stroke="#1a1410" stroke-width="0.6"/>
+        <rect x="32" y="32" width="1136" height="576" fill="none" stroke="#1a1410" stroke-width="2"/>
+
+        <!-- Corner ornaments -->
+        <g fill="#1a1410">
+          <path d="M 32 32 L 50 32 L 50 34 L 34 34 L 34 50 L 32 50 Z"/>
+          <path d="M 1168 32 L 1150 32 L 1150 34 L 1166 34 L 1166 50 L 1168 50 Z"/>
+          <path d="M 32 608 L 50 608 L 50 606 L 34 606 L 34 590 L 32 590 Z"/>
+          <path d="M 1168 608 L 1150 608 L 1150 606 L 1166 606 L 1166 590 L 1168 590 Z"/>
+        </g>
+
+        <!-- Title cartouche -->
+        <g transform="translate(600, 80)">
+          <line x1="-200" y1="0" x2="-25" y2="0" stroke="#1a1410" stroke-width="0.6"/>
+          <line x1="25" y1="0" x2="200" y2="0" stroke="#1a1410" stroke-width="0.6"/>
+          <circle cx="0" cy="0" r="3" fill="#b15535"/>
+          <text y="-12" text-anchor="middle" font-family="Fraunces, serif" font-size="13" letter-spacing="6" fill="#1a1410" font-weight="600">NEW · YORK · STATE · PARKS</text>
+          <text y="22" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="13" fill="#4a3d31">A five-day family circuit, May MMXXVI</text>
+        </g>
+
+        <!-- Compass rose (bottom right) -->
+        <g transform="translate(1090, 540)">
+          <circle r="42" fill="#f4eeda" stroke="#1a1410" stroke-width="0.6"/>
+          <circle r="36" fill="none" stroke="#1a1410" stroke-width="0.4"/>
+          <!-- Cardinal lines -->
+          <line x1="0" y1="-40" x2="0" y2="40" stroke="#1a1410" stroke-width="0.4"/>
+          <line x1="-40" y1="0" x2="40" y2="0" stroke="#1a1410" stroke-width="0.4"/>
+          <!-- Star -->
+          <path d="M 0 -36 L 4 0 L 0 36 L -4 0 Z" fill="url(#compass-grad)"/>
+          <path d="M -36 0 L 0 4 L 36 0 L 0 -4 Z" fill="#1a1410" opacity="0.55"/>
+          <circle r="2" fill="#1a1410"/>
+          <text y="-46" text-anchor="middle" font-family="Fraunces, serif" font-size="10" font-weight="700" fill="#1a1410">N</text>
+          <text y="55" text-anchor="middle" font-family="Fraunces, serif" font-size="9" fill="#1a1410">S</text>
+          <text x="50" y="3" text-anchor="middle" font-family="Fraunces, serif" font-size="9" fill="#1a1410">E</text>
+          <text x="-50" y="3" text-anchor="middle" font-family="Fraunces, serif" font-size="9" fill="#1a1410">W</text>
+        </g>
+
+        <!-- Lake Ontario hint -->
+        <g opacity="0.7">
+          <path d="M 350 130 Q 500 110 700 120 Q 900 130 950 160 Q 880 180 700 175 Q 500 175 350 160 Z" fill="url(#water-hatch)" stroke="#5a7282" stroke-width="0.6" opacity="0.4"/>
+          <text x="650" y="148" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="11" letter-spacing="6" fill="#5a7282" opacity="0.7">L A K E   O N T A R I O</text>
+        </g>
+
+        <!-- St. Lawrence hint near Day 3 -->
+        <path d="M 950 200 Q 1000 215 1080 220" fill="none" stroke="#5a7282" stroke-width="1.2" opacity="0.45" stroke-linecap="round"/>
+        <text x="1020" y="235" font-family="Newsreader, serif" font-style="italic" font-size="9" fill="#5a7282" opacity="0.7">St. Lawrence</text>
+
+        <!-- Mountains hint near Day 4 -->
+        <g opacity="0.55" fill="none" stroke="#5b3a4a" stroke-width="0.7">
+          <path d="M 950 380 L 970 360 L 990 385 L 1010 365 L 1030 390"/>
+          <path d="M 1000 410 L 1020 390 L 1040 415 L 1060 395 L 1080 420"/>
+        </g>
+        <text x="1015" y="445" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="10" fill="#5b3a4a" opacity="0.7">Adirondacks</text>
+
+        <!-- ROUTE PATH (animated draw) -->
+        <!-- Outbound: Marlborough(MA) -> Ithaca -> Geneseo -> Alex Bay -> Lake Placid -> Saratoga -> back -->
+        <path class="map-route" d="
+          M 1080 480
+          Q 980 470 880 475
+          Q 700 480 540 470
+          Q 380 460 260 380
+          Q 220 350 250 310
+          Q 290 270 380 260
+          Q 460 255 530 255
+          Q 600 255 700 245
+          Q 800 235 880 245
+          Q 950 255 970 285
+          Q 985 320 990 360
+          Q 1000 405 1010 460
+          Q 1020 510 980 540
+          Q 920 555 800 555
+          Q 600 555 400 545
+          Q 250 540 1080 480 Z"
+          fill="none" stroke="#b15535" stroke-width="2.5"
+          stroke-dasharray="9 5" stroke-linecap="round" stroke-linejoin="round"/>
+
+        <!-- Stops -->
+        <!-- Marlborough (origin) -->
+        <g class="map-stop" style="animation-delay:.5s">
+          <circle cx="1080" cy="480" r="6" fill="#1a1410"/>
+          <circle cx="1080" cy="480" r="11" fill="none" stroke="#1a1410" stroke-width="0.6"/>
+          <text x="1080" y="510" text-anchor="middle" font-family="Fraunces, serif" font-size="10" letter-spacing="2" fill="#1a1410" font-weight="600">MARLBOROUGH</text>
+          <text x="1080" y="523" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="8" fill="#8a7a64">start &amp; finish</text>
+        </g>
+
+        <!-- Day 1: Ithaca -->
+        <g class="map-stop" style="animation-delay:.9s">
+          <circle cx="380" cy="260" r="9" fill="#b15535"/>
+          <circle cx="380" cy="260" r="14" fill="none" stroke="#b15535" stroke-width="0.6"/>
+          <text x="380" y="264" text-anchor="middle" font-family="Fraunces, serif" font-size="11" font-weight="700" fill="#fff">1</text>
+          <text x="380" y="295" text-anchor="middle" font-family="Fraunces, serif" font-size="11" letter-spacing="2" fill="#1a1410" font-weight="600">ITHACA</text>
+          <text x="380" y="308" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="9" fill="#8a7a64">Taughannock Falls</text>
+        </g>
+
+        <!-- Day 2: Geneseo -->
+        <g class="map-stop" style="animation-delay:1.3s">
+          <circle cx="600" cy="255" r="9" fill="#2c4636"/>
+          <circle cx="600" cy="255" r="14" fill="none" stroke="#2c4636" stroke-width="0.6"/>
+          <text x="600" y="259" text-anchor="middle" font-family="Fraunces, serif" font-size="11" font-weight="700" fill="#fff">2</text>
+          <text x="600" y="290" text-anchor="middle" font-family="Fraunces, serif" font-size="11" letter-spacing="2" fill="#1a1410" font-weight="600">GENESEO</text>
+          <text x="600" y="303" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="9" fill="#8a7a64">Watkins Glen + Letchworth</text>
+        </g>
+
+        <!-- Day 3: Alexandria Bay -->
+        <g class="map-stop" style="animation-delay:1.7s">
+          <circle cx="880" cy="245" r="9" fill="#5a7282"/>
+          <circle cx="880" cy="245" r="14" fill="none" stroke="#5a7282" stroke-width="0.6"/>
+          <text x="880" y="249" text-anchor="middle" font-family="Fraunces, serif" font-size="11" font-weight="700" fill="#fff">3</text>
+          <text x="880" y="280" text-anchor="middle" font-family="Fraunces, serif" font-size="11" letter-spacing="2" fill="#1a1410" font-weight="600">ALEXANDRIA BAY</text>
+          <text x="880" y="293" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="9" fill="#8a7a64">Boldt Castle &middot; Wellesley Island</text>
+        </g>
+
+        <!-- Day 4: Lake Placid -->
+        <g class="map-stop" style="animation-delay:2.1s">
+          <circle cx="1010" cy="460" r="9" fill="#5b3a4a"/>
+          <circle cx="1010" cy="460" r="14" fill="none" stroke="#5b3a4a" stroke-width="0.6"/>
+          <text x="1010" y="464" text-anchor="middle" font-family="Fraunces, serif" font-size="11" font-weight="700" fill="#fff">4</text>
+          <text x="1010" y="495" text-anchor="middle" font-family="Fraunces, serif" font-size="11" letter-spacing="2" fill="#1a1410" font-weight="600">LAKE PLACID</text>
+          <text x="1010" y="508" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="9" fill="#8a7a64">High Falls Gorge &middot; Olympic</text>
+        </g>
+
+        <!-- Day 5: Saratoga (waypoint) -->
+        <g class="map-stop" style="animation-delay:2.5s">
+          <circle cx="800" cy="555" r="8" fill="#843521"/>
+          <circle cx="800" cy="555" r="13" fill="none" stroke="#843521" stroke-width="0.6"/>
+          <text x="800" y="559" text-anchor="middle" font-family="Fraunces, serif" font-size="10" font-weight="700" fill="#fff">5</text>
+          <text x="800" y="585" text-anchor="middle" font-family="Fraunces, serif" font-size="10" letter-spacing="2" fill="#1a1410" font-weight="600">SARATOGA SPRINGS</text>
+          <text x="800" y="597" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="9" fill="#8a7a64">mineral springs · drive home</text>
+        </g>
+
+        <!-- Drive segment labels -->
+        <g font-family="Newsreader, serif" font-style="italic" font-size="11" fill="#1a1410">
+          <text x="700" y="220" text-anchor="middle">— ~6 hours, 309 mi —</text>
+          <text x="490" y="220" text-anchor="middle" font-size="10">— ~2½ hr —</text>
+          <text x="745" y="218" text-anchor="middle" font-size="10">— ~3¾ hr —</text>
+          <text x="1035" y="350" text-anchor="middle" font-size="10" transform="rotate(75 1035 350)">— ~3½ hr —</text>
+          <text x="900" y="595" text-anchor="middle" font-size="10">— ~5½ hr drive home —</text>
+        </g>
+
+        <!-- Scale bar -->
+        <g transform="translate(60, 590)">
+          <line x1="0" y1="0" x2="100" y2="0" stroke="#1a1410" stroke-width="1.5"/>
+          <line x1="0" y1="-3" x2="0" y2="3" stroke="#1a1410" stroke-width="1.5"/>
+          <line x1="50" y1="-3" x2="50" y2="3" stroke="#1a1410" stroke-width="1"/>
+          <line x1="100" y1="-3" x2="100" y2="3" stroke="#1a1410" stroke-width="1.5"/>
+          <text x="0" y="-8" font-family="Fraunces, serif" font-size="9" font-weight="600" fill="#1a1410">0</text>
+          <text x="50" y="-8" text-anchor="middle" font-family="Fraunces, serif" font-size="9" font-weight="600" fill="#1a1410">50</text>
+          <text x="100" y="-8" text-anchor="middle" font-family="Fraunces, serif" font-size="9" font-weight="600" fill="#1a1410">100</text>
+          <text x="50" y="14" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="9" fill="#4a3d31">miles (approx.)</text>
+        </g>
+
+        <!-- Legend (top left, simple) -->
+        <g transform="translate(70, 130)" font-family="Newsreader, serif" font-size="10" fill="#1a1410">
+          <text font-style="italic" font-size="9" letter-spacing="1.5" fill="#4a3d31">A NOTE ON THIS MAP</text>
+          <text y="16" font-style="italic" font-size="11">Drawn from memory and</text>
+          <text y="30" font-style="italic" font-size="11">Rome2Rio routings, May 2026.</text>
+          <text y="44" font-style="italic" font-size="11">Distances are approximate;</text>
+          <text y="58" font-style="italic" font-size="11">drive times door to door.</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="ornament" aria-hidden="true">&#10086; &middot; &#10086;</div>
+
+<!-- =============== DAYS =============== -->
+<section class="spread days-section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow no-flank">The Itinerary</span>
+      <h2>Five days, told <em>day by day.</em></h2>
+      <p class="deck">Each day with its drive, its anchor stops, the night's lodging &mdash; and the small notes that come from travelling with a 2-year-old.</p>
+    </div>
+
+    <!-- DAY 1 -->
+    <article class="day-article day-1">
+      <div class="day-text">
+        <span class="day-num">01</span>
+        <div class="day-meta">
+          <span><b>Mon</b> May 18</span>
+          <span><b>Boston</b> &mdash; <b>Ithaca</b></span>
+          <span><b>~6 hr</b> · 309 mi</span>
+        </div>
+        <h3 class="day-headline">A long drive west, rewarded by <em>Taughannock&rsquo;s</em> taller-than-Niagara plunge.</h3>
+        <div class="day-body">
+          <p class="first-p">An eight o&rsquo;clock departure from Marlborough, lunch in Albany, and an arrival in Ithaca by four. With Vasu napping through the worst of it, plan on roughly seven hours door to door. Then the easy reward: a stroller-friendly mile and a half along the gorge floor to the base of <strong>Taughannock Falls</strong>, 215 feet of straight cascade. Dinner on the Commons.</p>
+        </div>
+        <div class="day-pull">
+          <span class="label">Verified Drive</span>
+          <span>~6 hr · 309 mi · before stops</span>
+        </div>
+        <div class="day-stay">
+          <b>Lodging</b>
+          <span class="place">Ithaca</span>
+        </div>
+      </div>
+      <div class="day-visual">
+        <figure class="postcard tilt-r">
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Taughannock_Falls.JPG/960px-Taughannock_Falls.JPG" alt="Taughannock Falls in summer."/>
+          <figcaption>
+            <span>No. 1 &middot; Taughannock Falls</span>
+            <span class="stamp">DAY ONE</span>
+          </figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- DAY 2 -->
+    <article class="day-article day-2 flip">
+      <div class="day-text">
+        <span class="day-num">02</span>
+        <div class="day-meta">
+          <span><b>Tue</b> May 19</span>
+          <span><b>Ithaca</b> &mdash; <b>Geneseo</b></span>
+          <span><b>~2½ hr</b></span>
+        </div>
+        <h3 class="day-headline">Two showcase parks &mdash; <em>Watkins Glen&rsquo;s</em> gorge, then <em>Letchworth&rsquo;s</em> seventeen-mile rim.</h3>
+        <div class="day-body">
+          <p class="first-p">Morning at <strong>Watkins Glen</strong>: enter from the North Rim (bridge construction in 2026), Vasu in the carrier on the stone steps, Gauri taking them by hand. Afternoon at <strong>Letchworth</strong>, the &ldquo;Grand Canyon of the East&rdquo;: drive the seventeen-mile park road, stop at Inspiration Point and Middle Falls. Both are stroller-easy. Stay near the Mt. Morris gate.</p>
+        </div>
+        <div class="day-pull">
+          <span class="label">Verified Drive</span>
+          <span>~2½ hr · Ithaca&ndash;WG ~40 min</span>
+        </div>
+        <div class="day-stay">
+          <b>Lodging</b>
+          <span class="place">Geneseo / Mt&nbsp;Morris</span>
+        </div>
+      </div>
+      <div class="day-visual">
+        <figure class="postcard tilt-l">
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Watkins_Glen_State_Park.jpg/960px-Watkins_Glen_State_Park.jpg" alt="Watkins Glen Gorge."/>
+          <figcaption>
+            <span>No. 2 &middot; Watkins Glen</span>
+            <span class="stamp">DAY TWO</span>
+          </figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- DAY 3 -->
+    <article class="day-article day-3">
+      <div class="day-text">
+        <span class="day-num">03</span>
+        <div class="day-meta">
+          <span><b>Wed</b> May 20</span>
+          <span><b>Geneseo</b> &mdash; <b>Alex&nbsp;Bay</b></span>
+          <span><b>~3¾ hr</b> · 184 mi</span>
+        </div>
+        <h3 class="day-headline">North to the islands, and a <em>boat tour</em> to a hundred-and-twenty-room castle.</h3>
+        <div class="day-body">
+          <p class="first-p">A steady three-hour drive north, with a Syracuse lunch break, brings you to Alexandria Bay by early afternoon. From the dock, Uncle Sam Boat Tours runs a shuttle to <strong>Boldt Castle</strong> on Heart Island &mdash; the single most memorable Thousand Islands experience. Castle admission verified at <strong>$14 adult</strong> (free under five). Family of six total: about <strong>$112.50</strong> with shuttle. End the day at Wellesley Island for sunset over the St. Lawrence.</p>
+        </div>
+        <div class="day-pull">
+          <span class="label">Verified Drive</span>
+          <span>~3 hr 47 min · 184 mi</span>
+        </div>
+        <div class="day-stay">
+          <b>Lodging</b>
+          <span class="place">Alexandria Bay</span>
+        </div>
+      </div>
+      <div class="day-visual">
+        <figure class="postcard tilt-r">
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Boldt_Castle.jpg/960px-Boldt_Castle.jpg" alt="Boldt Castle."/>
+          <figcaption>
+            <span>No. 3 &middot; Boldt Castle</span>
+            <span class="stamp">DAY THREE</span>
+          </figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- DAY 4 -->
+    <article class="day-article day-4 flip">
+      <div class="day-text">
+        <span class="day-num">04</span>
+        <div class="day-meta">
+          <span><b>Thu</b> May 21</span>
+          <span><b>Alex&nbsp;Bay</b> &mdash; <b>Lake&nbsp;Placid</b></span>
+          <span><b>~3½ hr</b></span>
+        </div>
+        <h3 class="day-headline">River to mountains. <em>High Falls Gorge</em>, the Olympic Skyride, and Mirror Lake at dusk.</h3>
+        <div class="day-body">
+          <p class="first-p">A morning out of Alexandria Bay, into the Adirondacks. Stop at <strong>High Falls Gorge</strong> in Wilmington (2026 season opens May 3 &mdash; just in time). Bridges over the AuSable for Gauri; carrier for Vasu on the steeper bits. In Lake Placid, the Cloudsplitter Gondola is closed until June 26, so the <strong>Olympic Jumping Complex</strong> Skyride is the substitute. Evening: a slow loop around Mirror Lake, paved and fully accessible.</p>
+        </div>
+        <div class="day-pull">
+          <span class="label">Verified Drive</span>
+          <span>~3½ hr · with High Falls stop</span>
+        </div>
+        <div class="day-stay">
+          <b>Lodging</b>
+          <span class="place">Lake Placid</span>
+        </div>
+      </div>
+      <div class="day-visual">
+        <figure class="postcard tilt-l">
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Lake_Placid_-_Mirror_Lake.jpg/960px-Lake_Placid_-_Mirror_Lake.jpg" alt="Mirror Lake, Lake Placid."/>
+          <figcaption>
+            <span>No. 4 &middot; Mirror Lake</span>
+            <span class="stamp">DAY FOUR</span>
+          </figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- DAY 5 -->
+    <article class="day-article day-5">
+      <div class="day-text">
+        <span class="day-num">05</span>
+        <div class="day-meta">
+          <span><b>Fri</b> May 22</span>
+          <span><b>Lake Placid</b> &mdash; <b>Marlborough</b></span>
+          <span><b>~5½ hr</b> drive</span>
+        </div>
+        <h3 class="day-headline">A long drive home, by way of <em>Saratoga&rsquo;s</em> bubbling springs.</h3>
+        <div class="day-body">
+          <p class="first-p">Leave Lake Placid by eight if you want any cushion at all. Five and a half hours of driving plus lunch, a walk, and rest stops adds up to seven or eight hours door to door &mdash; tight with kids. Late morning at <strong>Saratoga Spa State Park</strong> (Geyser Creek, the carbonated mineral &ldquo;spouters&rdquo;); lunch at Hattie&rsquo;s. Cross the Hudson before three to dodge afternoon Albany traffic.</p>
+        </div>
+        <div class="day-flag">
+          <em>Open question:</em> the Veterans Memorial Highway up Whiteface may open today (Memorial Day weekend Friday). Worth a phone call to ORDA. Squeezing it in adds 90 minutes to an already-tight day.
+        </div>
+        <div class="day-pull">
+          <span class="label">Door to Door</span>
+          <span>~7&ndash;8 hr · leave by 8 AM</span>
+        </div>
+        <div class="day-stay">
+          <b>Lodging</b>
+          <span class="place">Home</span>
+        </div>
+      </div>
+      <div class="day-visual">
+        <figure class="postcard tilt-r">
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Saratoga_Spa_State_Park.jpg/960px-Saratoga_Spa_State_Park.jpg" alt="Saratoga Spa State Park."/>
+          <figcaption>
+            <span>No. 5 &middot; Saratoga Spa</span>
+            <span class="stamp">DAY FIVE</span>
+          </figcaption>
+        </figure>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<div class="ornament" aria-hidden="true">&#10086; &middot; &#10086;</div>
+
+<!-- =============== PHOTO ESSAY =============== -->
+<section class="spread essay">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow no-flank">Photo Essay</span>
+      <h2>Six places, in <em>passing.</em></h2>
+      <p class="deck">A brief portfolio of the parks, in the order we&rsquo;ll see them. All images via Wikimedia Commons.</p>
+    </div>
+
+    <div class="essay-grid">
+      <figure class="essay-photo">
+        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Taughannock_Falls.JPG/960px-Taughannock_Falls.JPG" alt="Taughannock Falls."/>
+        <figcaption><span class="num">No. 1</span>Taughannock Falls &mdash; 215 ft, taller than Niagara</figcaption>
+      </figure>
+      <figure class="essay-photo">
+        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Watkins_Glen_State_Park.jpg/960px-Watkins_Glen_State_Park.jpg" alt="Watkins Glen Gorge."/>
+        <figcaption><span class="num">No. 2</span>Watkins Glen &mdash; North Rim entrance, 2026</figcaption>
+      </figure>
+      <figure class="essay-photo">
+        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Letchworth_State_Park_in_autumn.JPG/960px-Letchworth_State_Park_in_autumn.JPG" alt="Letchworth State Park."/>
+        <figcaption><span class="num">No. 3</span>Letchworth &mdash; the Grand Canyon of the East</figcaption>
+      </figure>
+      <figure class="essay-photo">
+        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Boldt_Castle.jpg/960px-Boldt_Castle.jpg" alt="Boldt Castle."/>
+        <figcaption><span class="num">No. 4</span>Boldt Castle &mdash; on Heart Island, by boat</figcaption>
+      </figure>
+      <figure class="essay-photo">
+        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Lake_Placid_-_Mirror_Lake.jpg/960px-Lake_Placid_-_Mirror_Lake.jpg" alt="Mirror Lake, Lake Placid."/>
+        <figcaption><span class="num">No. 5</span>Mirror Lake, Lake Placid &mdash; 2.7-mi paved loop</figcaption>
+      </figure>
+      <figure class="essay-photo">
+        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Saratoga_Spa_State_Park.jpg/960px-Saratoga_Spa_State_Park.jpg" alt="Saratoga Spa State Park."/>
+        <figcaption><span class="num">No. 6</span>Saratoga Spa State Park &mdash; last stop before home</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<div class="ornament" aria-hidden="true">&#10086; &middot; &#10086;</div>
+
+<!-- =============== AGENDA =============== -->
+<section class="spread agenda">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow no-flank">Outstanding</span>
+      <h2>Six <em>open questions</em>, three calls to make.</h2>
+      <p class="deck">Vote on the questions in the <a href="https://docs.google.com/spreadsheets/d/1Sv-vvfDgXsYtzs0dYT08WdStRzM_f70LFGkf7gvWOs4/edit" target="_blank" rel="noopener">companion sheet</a>. Make the calls the week of the trip.</p>
+    </div>
+
+    <div class="agenda-grid">
+
+      <div class="panel">
+        <span class="panel-eyebrow">Group decisions pending</span>
+        <h3>The <em>open</em> questions.</h3>
+        <ol class="decision-list">
+          <li><span class="q"><b>Dates.</b> May 18&ndash;22 <em>(recommended, default)</em> or May 25&ndash;29.</span></li>
+          <li><span class="q"><b>Transport.</b> Minivan + hotels ($3,194) or RV ($3,840&ndash;$4,135).</span></li>
+          <li><span class="q"><b>Trip length.</b> The 5-day default, or a 6-day version with a Saratoga overnight.</span></li>
+          <li><span class="q"><b>Day 5 add-on.</b> Veterans Memorial Highway IF open May 22.</span></li>
+          <li><span class="q"><b>Lodging picks</b> per town &mdash; shortlist in the Doc.</span></li>
+          <li><span class="q"><b>Niagara as a Day 6?</b> ~3½ hr of driving from Letchworth, plus visit time.</span></li>
+        </ol>
+      </div>
+
+      <div class="panel dark">
+        <span class="panel-eyebrow">Pre-trip phone calls</span>
+        <h3>Three calls, the <em>week of.</em></h3>
+        <ul class="call-list">
+          <li>
+            <span class="who">ORDA &middot; Whiteface highway</span>
+            <span class="num">518 · 946 · 2223</span>
+            <span class="why">&mdash; confirm whether Veterans Memorial Highway opens May 22</span>
+          </li>
+          <li>
+            <span class="who">Watkins Glen ranger</span>
+            <span class="num">607 · 535 · 4511</span>
+            <span class="why">&mdash; confirm Gorge Trail / North Rim status, morning of Day 2</span>
+          </li>
+          <li>
+            <span class="who">Uncle Sam Boat Tours</span>
+            <span class="num">315 · 482 · 2611</span>
+            <span class="why">&mdash; confirm 2026 shuttle prices at the ticket booth</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="ornament" aria-hidden="true">&#10086; &middot; &#10086;</div>
+
+<!-- =============== VERIFIED =============== -->
+<section class="spread verified">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow no-flank">Verified 2026 Constraints</span>
+      <h2>What is <em>open,</em> what is <em>closed,</em> what is yet uncertain.</h2>
+      <p class="deck">Each item below was independently checked against the operator&rsquo;s website on the verification date.</p>
+    </div>
+
+    <div class="verified-grid">
+
+      <div class="v-col open">
+        <h3><span class="marker glyph">&#10003;</span> Open &amp; available</h3>
+        <ul class="v-list">
+          <li><b>Boldt Castle</b> open from May 9; adult $14 verified at boldtcastle.com.</li>
+          <li><b>High Falls Gorge</b> opens <b>May 3, 2026</b>.</li>
+          <li><b>Olympic Jumping Complex</b> daily 9am&ndash;4pm in May (Skyride Thu&ndash;Mon).</li>
+          <li><b>Mirror Lake</b> 2.7-mi paved loop, fully accessible.</li>
+          <li><b>Saratoga Spa State Park</b> open year-round; the May trip is well clear of the July race meet.</li>
+        </ul>
+      </div>
+
+      <div class="v-col closed">
+        <h3><span class="marker glyph">&#215;</span> Closed or pending</h3>
+        <ul class="v-list">
+          <li><b>Whiteface Cloudsplitter Gondola</b> closed until <b>June 26, 2026</b>.</li>
+          <li><b>Veterans Memorial Highway</b> 2026 opening date unpublished &mdash; historically Memorial Day weekend Friday (= May 22). Call ORDA.</li>
+          <li><b>Watkins Glen</b> bridge construction through summer 2026 &mdash; North Rim entrance is the workaround.</li>
+          <li><b>Saratoga 2026 race meet</b> opens July 3; Belmont Stakes at Saratoga June 6. May trip is clear.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =============== CTA =============== -->
+<section class="cta-section">
+  <div class="wrap">
+    <h2>Now: vote on the <em>questions,</em> and find a free week.</h2>
+    <p class="deck">The full plan, lodging shortlist, and budget tracker live in the companion documents. Vote in the sheet; comment in the doc.</p>
+    <div class="cta-row">
+      <a class="btn" href="https://docs.google.com/document/d/1txbQGWCiuCKCHTDwlmgld8Fv27rdC2zQN2RYDKoR13Q/edit" target="_blank" rel="noopener">Open the Trip Doc &rarr;</a>
+      <a class="btn ghost" href="https://docs.google.com/spreadsheets/d/1Sv-vvfDgXsYtzs0dYT08WdStRzM_f70LFGkf7gvWOs4/edit" target="_blank" rel="noopener">Vote in the Sheet</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- =============== COLOPHON =============== -->
+<footer class="colophon">
+  <div class="wrap">
+    <div class="colophon-text">
+      <strong>A note on this issue</strong>
+      Drafted on the second of May, twenty-twenty-six, then revised the morning after when a friend&rsquo;s notes came back. Every drive time was checked against Rome2Rio and Wanderlog; every admission price against the operator&rsquo;s own website; every closure against ORDA, the New York State Parks office, and Whiteface. Photographs courtesy of Wikimedia Commons. Set in <em>Fraunces</em> and <em>Newsreader.</em>
+    </div>
+    <div class="colophon-links">
+      Trip Doc &middot;
+      <a href="https://docs.google.com/document/d/1txbQGWCiuCKCHTDwlmgld8Fv27rdC2zQN2RYDKoR13Q/edit" target="_blank" rel="noopener">read</a><br/>
+      Decisions Sheet &middot;
+      <a href="https://docs.google.com/spreadsheets/d/1Sv-vvfDgXsYtzs0dYT08WdStRzM_f70LFGkf7gvWOs4/edit" target="_blank" rel="noopener">vote</a><br/>
+      Source markdowns &middot; <em>life/travel/docs/</em>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Trigger map route animation when in viewport
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('reveal-map');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    document.querySelectorAll('.map-frame').forEach(el => obs.observe(el));
+  }
+</script>
+
+</body>
+</html>
