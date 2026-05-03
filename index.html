@@ -1033,10 +1033,10 @@
         <em>Loop</em>
       </h1>
       <p class="lede">
-        Five days through the gorges, castles, mountains and mineral springs of upstate New York &mdash; calibrated for <strong>four adults, Gauri (8), and Vasu (2)</strong>, departing Marlborough on the Monday before Memorial Day.
+        Five days through the gorges, castles, mountains and mineral springs of upstate New York &mdash; calibrated for <strong>four adults, Gauri (8), and Vasu (2)</strong>, departing Marlborough on the Thursday of Memorial Day weekend.
       </p>
       <div class="hero-meta">
-        <span><b>May 18</b> &mdash; <b>May 22</b></span>
+        <span><b>May 21</b> &mdash; <b>May 25</b></span>
         <span>Marlborough <span style="font-style:italic;color:var(--sienna)">to</span> Marlborough</span>
         <span>Five Stops · One Loop</span>
       </div>
@@ -1091,172 +1091,190 @@
     </div>
 
     <div class="map-frame reveal-map">
-      <svg viewBox="0 0 1200 640" role="img" aria-label="Map showing the loop route through upstate New York with five overnight stops.">
+      <svg viewBox="0 0 1200 580" role="img" aria-label="Map showing the loop route through upstate New York with five overnight stops.">
         <defs>
-          <!-- Compass star gradient -->
           <linearGradient id="compass-grad" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stop-color="#b15535"/>
             <stop offset="100%" stop-color="#8a3d24"/>
           </linearGradient>
-          <!-- Hatch pattern for water -->
-          <pattern id="water-hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
-            <line x1="0" y1="0" x2="0" y2="6" stroke="#5a7282" stroke-width="0.4" opacity="0.4"/>
+          <pattern id="water-hatch" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(45)">
+            <line x1="0" y1="0" x2="0" y2="7" stroke="#5a7282" stroke-width="0.4" opacity="0.45"/>
           </pattern>
-          <!-- Topographic dots -->
           <pattern id="topo" patternUnits="userSpaceOnUse" width="14" height="14">
-            <circle cx="2" cy="2" r="0.4" fill="#8a7a64" opacity="0.35"/>
+            <circle cx="2" cy="2" r="0.4" fill="#8a7a64" opacity="0.32"/>
           </pattern>
-          <filter id="ink-bleed">
-            <feGaussianBlur stdDeviation="0.4"/>
-          </filter>
         </defs>
 
         <!-- Background plate -->
-        <rect x="0" y="0" width="1200" height="640" fill="#f4eeda"/>
-        <rect x="0" y="0" width="1200" height="640" fill="url(#topo)"/>
+        <rect x="0" y="0" width="1200" height="580" fill="#f4eeda"/>
+        <rect x="0" y="0" width="1200" height="580" fill="url(#topo)"/>
 
-        <!-- Inner border -->
-        <rect x="20" y="20" width="1160" height="600" fill="none" stroke="#1a1410" stroke-width="0.6"/>
-        <rect x="32" y="32" width="1136" height="576" fill="none" stroke="#1a1410" stroke-width="2"/>
+        <!-- Decorative double-rule border -->
+        <rect x="20" y="20" width="1160" height="540" fill="none" stroke="#1a1410" stroke-width="0.6"/>
+        <rect x="32" y="32" width="1136" height="516" fill="none" stroke="#1a1410" stroke-width="2"/>
 
         <!-- Corner ornaments -->
         <g fill="#1a1410">
           <path d="M 32 32 L 50 32 L 50 34 L 34 34 L 34 50 L 32 50 Z"/>
           <path d="M 1168 32 L 1150 32 L 1150 34 L 1166 34 L 1166 50 L 1168 50 Z"/>
-          <path d="M 32 608 L 50 608 L 50 606 L 34 606 L 34 590 L 32 590 Z"/>
-          <path d="M 1168 608 L 1150 608 L 1150 606 L 1166 606 L 1166 590 L 1168 590 Z"/>
+          <path d="M 32 548 L 50 548 L 50 546 L 34 546 L 34 530 L 32 530 Z"/>
+          <path d="M 1168 548 L 1150 548 L 1150 546 L 1166 546 L 1166 530 L 1168 530 Z"/>
         </g>
 
-        <!-- Title cartouche -->
-        <g transform="translate(600, 80)">
-          <line x1="-200" y1="0" x2="-25" y2="0" stroke="#1a1410" stroke-width="0.6"/>
-          <line x1="25" y1="0" x2="200" y2="0" stroke="#1a1410" stroke-width="0.6"/>
+        <!-- Title cartouche, top center -->
+        <g transform="translate(600, 70)">
+          <line x1="-220" y1="0" x2="-25" y2="0" stroke="#1a1410" stroke-width="0.6"/>
+          <line x1="25" y1="0" x2="220" y2="0" stroke="#1a1410" stroke-width="0.6"/>
           <circle cx="0" cy="0" r="3" fill="#b15535"/>
           <text y="-12" text-anchor="middle" font-family="Fraunces, serif" font-size="13" letter-spacing="6" fill="#1a1410" font-weight="600">NEW · YORK · STATE · PARKS</text>
           <text y="22" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="13" fill="#4a3d31">A five-day family circuit, May MMXXVI</text>
         </g>
 
-        <!-- Compass rose (bottom right) -->
-        <g transform="translate(1090, 540)">
-          <circle r="42" fill="#f4eeda" stroke="#1a1410" stroke-width="0.6"/>
-          <circle r="36" fill="none" stroke="#1a1410" stroke-width="0.4"/>
-          <!-- Cardinal lines -->
-          <line x1="0" y1="-40" x2="0" y2="40" stroke="#1a1410" stroke-width="0.4"/>
-          <line x1="-40" y1="0" x2="40" y2="0" stroke="#1a1410" stroke-width="0.4"/>
-          <!-- Star -->
-          <path d="M 0 -36 L 4 0 L 0 36 L -4 0 Z" fill="url(#compass-grad)"/>
-          <path d="M -36 0 L 0 4 L 36 0 L 0 -4 Z" fill="#1a1410" opacity="0.55"/>
-          <circle r="2" fill="#1a1410"/>
-          <text y="-46" text-anchor="middle" font-family="Fraunces, serif" font-size="10" font-weight="700" fill="#1a1410">N</text>
-          <text y="55" text-anchor="middle" font-family="Fraunces, serif" font-size="9" fill="#1a1410">S</text>
-          <text x="50" y="3" text-anchor="middle" font-family="Fraunces, serif" font-size="9" fill="#1a1410">E</text>
-          <text x="-50" y="3" text-anchor="middle" font-family="Fraunces, serif" font-size="9" fill="#1a1410">W</text>
+        <!-- Lake Ontario across the top of the map -->
+        <g>
+          <path d="M 200 175 Q 380 150 580 155 Q 780 160 880 195 Q 800 215 580 210 Q 380 200 200 195 Z"
+                fill="url(#water-hatch)" stroke="#5a7282" stroke-width="0.6" opacity="0.5"/>
+          <text x="540" y="185" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="12" letter-spacing="8" fill="#5a7282" opacity="0.85">L A K E   O N T A R I O</text>
         </g>
 
-        <!-- Lake Ontario hint -->
-        <g opacity="0.7">
-          <path d="M 350 130 Q 500 110 700 120 Q 900 130 950 160 Q 880 180 700 175 Q 500 175 350 160 Z" fill="url(#water-hatch)" stroke="#5a7282" stroke-width="0.6" opacity="0.4"/>
-          <text x="650" y="148" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="11" letter-spacing="6" fill="#5a7282" opacity="0.7">L A K E   O N T A R I O</text>
+        <!-- St. Lawrence River near Alex Bay -->
+        <path d="M 880 195 Q 920 170 980 165" fill="none" stroke="#5a7282" stroke-width="1.4" opacity="0.6" stroke-linecap="round"/>
+        <text x="930" y="155" font-family="Newsreader, serif" font-style="italic" font-size="9" fill="#5a7282" opacity="0.85" letter-spacing="0.5">St. Lawrence</text>
+
+        <!-- Adirondack mountain glyphs (between Lake Placid area) -->
+        <g opacity="0.5" fill="none" stroke="#5b3a4a" stroke-width="0.7" stroke-linejoin="round">
+          <path d="M 870 250 L 890 230 L 905 250 L 920 230 L 940 255"/>
+          <path d="M 920 275 L 940 255 L 955 275 L 970 250 L 990 280"/>
+          <path d="M 880 295 L 905 270 L 925 295"/>
+        </g>
+        <text x="930" y="320" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="10" letter-spacing="0.5" fill="#5b3a4a" opacity="0.85">Adirondack High Peaks</text>
+
+        <!-- Finger Lakes hint (south of Lake Ontario, near Ithaca/Geneseo) -->
+        <g opacity="0.45" stroke="#5a7282" stroke-width="0.8" fill="none">
+          <path d="M 305 290 L 315 360"/>
+          <path d="M 360 280 L 370 365"/>
+          <path d="M 415 285 L 425 365"/>
+        </g>
+        <text x="335" y="385" font-family="Newsreader, serif" font-style="italic" font-size="9" fill="#5a7282" opacity="0.7">Finger Lakes</text>
+
+        <!-- Massachusetts shading hint -->
+        <g opacity="0.25">
+          <path d="M 1060 340 L 1170 340 L 1170 510 L 1060 510 Z" fill="none" stroke="#8a7a64" stroke-width="0.4" stroke-dasharray="2 3"/>
+          <text x="1115" y="355" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="9" fill="#8a7a64" letter-spacing="3">M A S S.</text>
         </g>
 
-        <!-- St. Lawrence hint near Day 3 -->
-        <path d="M 950 200 Q 1000 215 1080 220" fill="none" stroke="#5a7282" stroke-width="1.2" opacity="0.45" stroke-linecap="round"/>
-        <text x="1020" y="235" font-family="Newsreader, serif" font-style="italic" font-size="9" fill="#5a7282" opacity="0.7">St. Lawrence</text>
-
-        <!-- Mountains hint near Day 4 -->
-        <g opacity="0.55" fill="none" stroke="#5b3a4a" stroke-width="0.7">
-          <path d="M 950 380 L 970 360 L 990 385 L 1010 365 L 1030 390"/>
-          <path d="M 1000 410 L 1020 390 L 1040 415 L 1060 395 L 1080 420"/>
-        </g>
-        <text x="1015" y="445" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="10" fill="#5b3a4a" opacity="0.7">Adirondacks</text>
-
-        <!-- ROUTE PATH (animated draw) -->
-        <!-- Outbound: Marlborough(MA) -> Ithaca -> Geneseo -> Alex Bay -> Lake Placid -> Saratoga -> back -->
+        <!-- =============================================== -->
+        <!-- ROUTE PATH (single Bezier loop, animated draw)   -->
+        <!-- Stops in order:                                   -->
+        <!--  Start: Marlborough (1110, 460)                   -->
+        <!--  Day 1: Ithaca       (380, 380)                   -->
+        <!--  Day 2: Geneseo      (240, 295)                   -->
+        <!--  Day 3: Alex Bay     (650, 220)                   -->
+        <!--  Day 4: Lake Placid  (970, 250)                   -->
+        <!--  Day 5: Saratoga     (970, 410)                   -->
+        <!--  Return: Marlborough (1110, 460)                  -->
+        <!-- =============================================== -->
         <path class="map-route" d="
-          M 1080 480
-          Q 980 470 880 475
-          Q 700 480 540 470
-          Q 380 460 260 380
-          Q 220 350 250 310
-          Q 290 270 380 260
-          Q 460 255 530 255
-          Q 600 255 700 245
-          Q 800 235 880 245
-          Q 950 255 970 285
-          Q 985 320 990 360
-          Q 1000 405 1010 460
-          Q 1020 510 980 540
-          Q 920 555 800 555
-          Q 600 555 400 545
-          Q 250 540 1080 480 Z"
+          M 1110 460
+          C 900 500, 600 440, 380 380
+          C 320 360, 270 320, 240 295
+          C 320 250, 470 220, 650 220
+          C 770 215, 880 225, 970 250
+          C 970 320, 970 370, 970 410
+          C 1010 425, 1080 450, 1110 460 Z"
           fill="none" stroke="#b15535" stroke-width="2.5"
           stroke-dasharray="9 5" stroke-linecap="round" stroke-linejoin="round"/>
 
-        <!-- Stops -->
-        <!-- Marlborough (origin) -->
+        <!-- Drive segment labels (italic, along path mid-points, never overlapping a stop) -->
+        <g font-family="Newsreader, serif" font-style="italic" fill="#1a1410">
+          <!-- Day 1: Marlborough -> Ithaca (long curve south) -->
+          <text x="710" y="495" text-anchor="middle" font-size="11">— Day 1 · ~6 hr, 309 mi —</text>
+          <!-- Day 2: Ithaca -> Geneseo -->
+          <text x="280" y="345" text-anchor="middle" font-size="10">— Day 2 · ~2½ hr —</text>
+          <!-- Day 3: Geneseo -> Alex Bay -->
+          <text x="450" y="240" text-anchor="middle" font-size="10">— Day 3 · ~3¾ hr —</text>
+          <!-- Day 4: Alex Bay -> Lake Placid -->
+          <text x="810" y="245" text-anchor="middle" font-size="10">— Day 4 · ~3½ hr —</text>
+          <!-- Day 5a: Lake Placid -> Saratoga -->
+          <text x="990" y="335" font-size="10" transform="rotate(90 990 335)">— ~2 hr —</text>
+          <!-- Day 5b: Saratoga -> Marlborough -->
+          <text x="1050" y="450" text-anchor="middle" font-size="10">— ~3½ hr —</text>
+        </g>
+
+        <!-- =============================================== -->
+        <!-- STOPS                                            -->
+        <!-- =============================================== -->
+
+        <!-- Marlborough (origin/end), bottom right -->
         <g class="map-stop" style="animation-delay:.5s">
-          <circle cx="1080" cy="480" r="6" fill="#1a1410"/>
-          <circle cx="1080" cy="480" r="11" fill="none" stroke="#1a1410" stroke-width="0.6"/>
-          <text x="1080" y="510" text-anchor="middle" font-family="Fraunces, serif" font-size="10" letter-spacing="2" fill="#1a1410" font-weight="600">MARLBOROUGH</text>
-          <text x="1080" y="523" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="8" fill="#8a7a64">start &amp; finish</text>
+          <circle cx="1110" cy="460" r="6" fill="#1a1410"/>
+          <circle cx="1110" cy="460" r="11" fill="none" stroke="#1a1410" stroke-width="0.6"/>
+          <text x="1110" y="487" text-anchor="middle" font-family="Fraunces, serif" font-size="10" letter-spacing="2" fill="#1a1410" font-weight="600">MARLBOROUGH</text>
+          <text x="1110" y="500" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="8" fill="#8a7a64">start &amp; finish</text>
         </g>
 
-        <!-- Day 1: Ithaca -->
+        <!-- Day 1: Ithaca, lower middle-left -->
         <g class="map-stop" style="animation-delay:.9s">
-          <circle cx="380" cy="260" r="9" fill="#b15535"/>
-          <circle cx="380" cy="260" r="14" fill="none" stroke="#b15535" stroke-width="0.6"/>
-          <text x="380" y="264" text-anchor="middle" font-family="Fraunces, serif" font-size="11" font-weight="700" fill="#fff">1</text>
-          <text x="380" y="295" text-anchor="middle" font-family="Fraunces, serif" font-size="11" letter-spacing="2" fill="#1a1410" font-weight="600">ITHACA</text>
-          <text x="380" y="308" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="9" fill="#8a7a64">Taughannock Falls</text>
+          <circle cx="380" cy="380" r="9" fill="#b15535"/>
+          <circle cx="380" cy="380" r="14" fill="none" stroke="#b15535" stroke-width="0.6"/>
+          <text x="380" y="384" text-anchor="middle" font-family="Fraunces, serif" font-size="11" font-weight="700" fill="#fff">1</text>
+          <text x="380" y="410" text-anchor="middle" font-family="Fraunces, serif" font-size="11" letter-spacing="2" fill="#1a1410" font-weight="600">ITHACA</text>
+          <text x="380" y="423" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="9" fill="#8a7a64">Taughannock Falls</text>
         </g>
 
-        <!-- Day 2: Geneseo -->
+        <!-- Day 2: Geneseo, far left -->
         <g class="map-stop" style="animation-delay:1.3s">
-          <circle cx="600" cy="255" r="9" fill="#2c4636"/>
-          <circle cx="600" cy="255" r="14" fill="none" stroke="#2c4636" stroke-width="0.6"/>
-          <text x="600" y="259" text-anchor="middle" font-family="Fraunces, serif" font-size="11" font-weight="700" fill="#fff">2</text>
-          <text x="600" y="290" text-anchor="middle" font-family="Fraunces, serif" font-size="11" letter-spacing="2" fill="#1a1410" font-weight="600">GENESEO</text>
-          <text x="600" y="303" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="9" fill="#8a7a64">Watkins Glen + Letchworth</text>
+          <circle cx="240" cy="295" r="9" fill="#2c4636"/>
+          <circle cx="240" cy="295" r="14" fill="none" stroke="#2c4636" stroke-width="0.6"/>
+          <text x="240" y="299" text-anchor="middle" font-family="Fraunces, serif" font-size="11" font-weight="700" fill="#fff">2</text>
+          <text x="240" y="270" text-anchor="middle" font-family="Fraunces, serif" font-size="11" letter-spacing="2" fill="#1a1410" font-weight="600">GENESEO</text>
+          <text x="240" y="258" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="9" fill="#8a7a64">Watkins Glen + Letchworth</text>
         </g>
 
-        <!-- Day 3: Alexandria Bay -->
+        <!-- Day 3: Alexandria Bay, top center (near St. Lawrence) -->
         <g class="map-stop" style="animation-delay:1.7s">
-          <circle cx="880" cy="245" r="9" fill="#5a7282"/>
-          <circle cx="880" cy="245" r="14" fill="none" stroke="#5a7282" stroke-width="0.6"/>
-          <text x="880" y="249" text-anchor="middle" font-family="Fraunces, serif" font-size="11" font-weight="700" fill="#fff">3</text>
-          <text x="880" y="280" text-anchor="middle" font-family="Fraunces, serif" font-size="11" letter-spacing="2" fill="#1a1410" font-weight="600">ALEXANDRIA BAY</text>
-          <text x="880" y="293" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="9" fill="#8a7a64">Boldt Castle &middot; Wellesley Island</text>
+          <circle cx="650" cy="220" r="9" fill="#5a7282"/>
+          <circle cx="650" cy="220" r="14" fill="none" stroke="#5a7282" stroke-width="0.6"/>
+          <text x="650" y="224" text-anchor="middle" font-family="Fraunces, serif" font-size="11" font-weight="700" fill="#fff">3</text>
+          <text x="650" y="250" text-anchor="middle" font-family="Fraunces, serif" font-size="11" letter-spacing="2" fill="#1a1410" font-weight="600">ALEXANDRIA BAY</text>
+          <text x="650" y="263" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="9" fill="#8a7a64">Boldt Castle &middot; Wellesley Island</text>
         </g>
 
-        <!-- Day 4: Lake Placid -->
+        <!-- Day 4: Lake Placid, upper right -->
         <g class="map-stop" style="animation-delay:2.1s">
-          <circle cx="1010" cy="460" r="9" fill="#5b3a4a"/>
-          <circle cx="1010" cy="460" r="14" fill="none" stroke="#5b3a4a" stroke-width="0.6"/>
-          <text x="1010" y="464" text-anchor="middle" font-family="Fraunces, serif" font-size="11" font-weight="700" fill="#fff">4</text>
-          <text x="1010" y="495" text-anchor="middle" font-family="Fraunces, serif" font-size="11" letter-spacing="2" fill="#1a1410" font-weight="600">LAKE PLACID</text>
-          <text x="1010" y="508" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="9" fill="#8a7a64">High Falls Gorge &middot; Olympic</text>
+          <circle cx="970" cy="250" r="9" fill="#5b3a4a"/>
+          <circle cx="970" cy="250" r="14" fill="none" stroke="#5b3a4a" stroke-width="0.6"/>
+          <text x="970" y="254" text-anchor="middle" font-family="Fraunces, serif" font-size="11" font-weight="700" fill="#fff">4</text>
+          <text x="1075" y="247" text-anchor="middle" font-family="Fraunces, serif" font-size="11" letter-spacing="2" fill="#1a1410" font-weight="600">LAKE PLACID</text>
+          <text x="1075" y="260" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="9" fill="#8a7a64">High Falls Gorge · Olympic</text>
         </g>
 
-        <!-- Day 5: Saratoga (waypoint) -->
+        <!-- Day 5: Saratoga (waypoint, between Lake Placid and Marlborough) -->
         <g class="map-stop" style="animation-delay:2.5s">
-          <circle cx="800" cy="555" r="8" fill="#843521"/>
-          <circle cx="800" cy="555" r="13" fill="none" stroke="#843521" stroke-width="0.6"/>
-          <text x="800" y="559" text-anchor="middle" font-family="Fraunces, serif" font-size="10" font-weight="700" fill="#fff">5</text>
-          <text x="800" y="585" text-anchor="middle" font-family="Fraunces, serif" font-size="10" letter-spacing="2" fill="#1a1410" font-weight="600">SARATOGA SPRINGS</text>
-          <text x="800" y="597" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="9" fill="#8a7a64">mineral springs · drive home</text>
+          <circle cx="970" cy="410" r="8" fill="#843521"/>
+          <circle cx="970" cy="410" r="13" fill="none" stroke="#843521" stroke-width="0.6"/>
+          <text x="970" y="414" text-anchor="middle" font-family="Fraunces, serif" font-size="10" font-weight="700" fill="#fff">5</text>
+          <text x="855" y="407" text-anchor="middle" font-family="Fraunces, serif" font-size="10" letter-spacing="2" fill="#1a1410" font-weight="600">SARATOGA SPRINGS</text>
+          <text x="855" y="420" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="9" fill="#8a7a64">mineral springs · drive home</text>
         </g>
 
-        <!-- Drive segment labels -->
-        <g font-family="Newsreader, serif" font-style="italic" font-size="11" fill="#1a1410">
-          <text x="700" y="220" text-anchor="middle">— ~6 hours, 309 mi —</text>
-          <text x="490" y="220" text-anchor="middle" font-size="10">— ~2½ hr —</text>
-          <text x="745" y="218" text-anchor="middle" font-size="10">— ~3¾ hr —</text>
-          <text x="1035" y="350" text-anchor="middle" font-size="10" transform="rotate(75 1035 350)">— ~3½ hr —</text>
-          <text x="900" y="595" text-anchor="middle" font-size="10">— ~5½ hr drive home —</text>
+        <!-- Compass rose, smaller, lower-left of map (out of route's way) -->
+        <g transform="translate(110, 470)">
+          <circle r="36" fill="#f4eeda" stroke="#1a1410" stroke-width="0.6"/>
+          <circle r="30" fill="none" stroke="#1a1410" stroke-width="0.4"/>
+          <line x1="0" y1="-34" x2="0" y2="34" stroke="#1a1410" stroke-width="0.4"/>
+          <line x1="-34" y1="0" x2="34" y2="0" stroke="#1a1410" stroke-width="0.4"/>
+          <path d="M 0 -30 L 4 0 L 0 30 L -4 0 Z" fill="url(#compass-grad)"/>
+          <path d="M -30 0 L 0 4 L 30 0 L 0 -4 Z" fill="#1a1410" opacity="0.55"/>
+          <circle r="2" fill="#1a1410"/>
+          <text y="-40" text-anchor="middle" font-family="Fraunces, serif" font-size="10" font-weight="700" fill="#1a1410">N</text>
+          <text y="48" text-anchor="middle" font-family="Fraunces, serif" font-size="9" fill="#1a1410">S</text>
+          <text x="44" y="3" text-anchor="middle" font-family="Fraunces, serif" font-size="9" fill="#1a1410">E</text>
+          <text x="-44" y="3" text-anchor="middle" font-family="Fraunces, serif" font-size="9" fill="#1a1410">W</text>
         </g>
 
-        <!-- Scale bar -->
-        <g transform="translate(60, 590)">
+        <!-- Scale bar, bottom center -->
+        <g transform="translate(550, 525)">
           <line x1="0" y1="0" x2="100" y2="0" stroke="#1a1410" stroke-width="1.5"/>
           <line x1="0" y1="-3" x2="0" y2="3" stroke="#1a1410" stroke-width="1.5"/>
           <line x1="50" y1="-3" x2="50" y2="3" stroke="#1a1410" stroke-width="1"/>
@@ -1267,13 +1285,11 @@
           <text x="50" y="14" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="9" fill="#4a3d31">miles (approx.)</text>
         </g>
 
-        <!-- Legend (top left, simple) -->
-        <g transform="translate(70, 130)" font-family="Newsreader, serif" font-size="10" fill="#1a1410">
+        <!-- Marginalia, bottom right -->
+        <g transform="translate(850, 510)" font-family="Newsreader, serif" fill="#1a1410">
           <text font-style="italic" font-size="9" letter-spacing="1.5" fill="#4a3d31">A NOTE ON THIS MAP</text>
-          <text y="16" font-style="italic" font-size="11">Drawn from memory and</text>
-          <text y="30" font-style="italic" font-size="11">Rome2Rio routings, May 2026.</text>
-          <text y="44" font-style="italic" font-size="11">Distances are approximate;</text>
-          <text y="58" font-style="italic" font-size="11">drive times door to door.</text>
+          <text y="14" font-style="italic" font-size="10">Drawn after Rome2Rio routings, May 2026.</text>
+          <text y="27" font-style="italic" font-size="10">Distances approximate; drive times door-to-door.</text>
         </g>
       </svg>
     </div>
@@ -1296,7 +1312,7 @@
       <div class="day-text">
         <span class="day-num">01</span>
         <div class="day-meta">
-          <span><b>Mon</b> May 18</span>
+          <span><b>Thu</b> May 21</span>
           <span><b>Boston</b> &mdash; <b>Ithaca</b></span>
           <span><b>~6 hr</b> · 309 mi</span>
         </div>
@@ -1315,7 +1331,7 @@
       </div>
       <div class="day-visual">
         <figure class="postcard tilt-r">
-          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Taughannock_Falls.JPG/960px-Taughannock_Falls.JPG" alt="Taughannock Falls in summer."/>
+          <img loading="lazy" src="img/01-taughannock.jpg" alt="Taughannock Falls in summer."/>
           <figcaption>
             <span>No. 1 &middot; Taughannock Falls</span>
             <span class="stamp">DAY ONE</span>
@@ -1329,7 +1345,7 @@
       <div class="day-text">
         <span class="day-num">02</span>
         <div class="day-meta">
-          <span><b>Tue</b> May 19</span>
+          <span><b>Fri</b> May 22</span>
           <span><b>Ithaca</b> &mdash; <b>Geneseo</b></span>
           <span><b>~2½ hr</b></span>
         </div>
@@ -1348,7 +1364,7 @@
       </div>
       <div class="day-visual">
         <figure class="postcard tilt-l">
-          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Watkins_Glen_State_Park.jpg/960px-Watkins_Glen_State_Park.jpg" alt="Watkins Glen Gorge."/>
+          <img loading="lazy" src="img/02-watkins-glen.jpg" alt="Watkins Glen Gorge."/>
           <figcaption>
             <span>No. 2 &middot; Watkins Glen</span>
             <span class="stamp">DAY TWO</span>
@@ -1362,7 +1378,7 @@
       <div class="day-text">
         <span class="day-num">03</span>
         <div class="day-meta">
-          <span><b>Wed</b> May 20</span>
+          <span><b>Sat</b> May 23</span>
           <span><b>Geneseo</b> &mdash; <b>Alex&nbsp;Bay</b></span>
           <span><b>~3¾ hr</b> · 184 mi</span>
         </div>
@@ -1381,7 +1397,7 @@
       </div>
       <div class="day-visual">
         <figure class="postcard tilt-r">
-          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Boldt_Castle.jpg/960px-Boldt_Castle.jpg" alt="Boldt Castle."/>
+          <img loading="lazy" src="img/04-boldt-castle.jpg" alt="Boldt Castle."/>
           <figcaption>
             <span>No. 3 &middot; Boldt Castle</span>
             <span class="stamp">DAY THREE</span>
@@ -1395,7 +1411,7 @@
       <div class="day-text">
         <span class="day-num">04</span>
         <div class="day-meta">
-          <span><b>Thu</b> May 21</span>
+          <span><b>Sun</b> May 24</span>
           <span><b>Alex&nbsp;Bay</b> &mdash; <b>Lake&nbsp;Placid</b></span>
           <span><b>~3½ hr</b></span>
         </div>
@@ -1414,7 +1430,7 @@
       </div>
       <div class="day-visual">
         <figure class="postcard tilt-l">
-          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Lake_Placid_-_Mirror_Lake.jpg/960px-Lake_Placid_-_Mirror_Lake.jpg" alt="Mirror Lake, Lake Placid."/>
+          <img loading="lazy" src="img/05-mirror-lake.jpg" alt="Mirror Lake, Lake Placid."/>
           <figcaption>
             <span>No. 4 &middot; Mirror Lake</span>
             <span class="stamp">DAY FOUR</span>
@@ -1428,7 +1444,7 @@
       <div class="day-text">
         <span class="day-num">05</span>
         <div class="day-meta">
-          <span><b>Fri</b> May 22</span>
+          <span><b>Mon</b> May 25 · <em style="color:var(--rust);font-style:italic;letter-spacing:0">Memorial Day</em></span>
           <span><b>Lake Placid</b> &mdash; <b>Marlborough</b></span>
           <span><b>~5½ hr</b> drive</span>
         </div>
@@ -1437,7 +1453,7 @@
           <p class="first-p">Leave Lake Placid by eight if you want any cushion at all. Five and a half hours of driving plus lunch, a walk, and rest stops adds up to seven or eight hours door to door &mdash; tight with kids. Late morning at <strong>Saratoga Spa State Park</strong> (Geyser Creek, the carbonated mineral &ldquo;spouters&rdquo;); lunch at Hattie&rsquo;s. Cross the Hudson before three to dodge afternoon Albany traffic.</p>
         </div>
         <div class="day-flag">
-          <em>Open question:</em> the Veterans Memorial Highway up Whiteface may open today (Memorial Day weekend Friday). Worth a phone call to ORDA. Squeezing it in adds 90 minutes to an already-tight day.
+          <em>Two flags for Memorial Day Monday:</em> (1) Veterans Memorial Highway up Whiteface should be open by today &mdash; better squeezed in Day 4 afternoon than this morning. (2) Heavy holiday return traffic on I-87 and Mass Pike all afternoon &mdash; cross the Hudson before noon, not 3 PM.
         </div>
         <div class="day-pull">
           <span class="label">Door to Door</span>
@@ -1450,7 +1466,7 @@
       </div>
       <div class="day-visual">
         <figure class="postcard tilt-r">
-          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Saratoga_Spa_State_Park.jpg/960px-Saratoga_Spa_State_Park.jpg" alt="Saratoga Spa State Park."/>
+          <img loading="lazy" src="img/06-saratoga-spa.jpg" alt="Saratoga Spa State Park."/>
           <figcaption>
             <span>No. 5 &middot; Saratoga Spa</span>
             <span class="stamp">DAY FIVE</span>
@@ -1475,27 +1491,27 @@
 
     <div class="essay-grid">
       <figure class="essay-photo">
-        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Taughannock_Falls.JPG/960px-Taughannock_Falls.JPG" alt="Taughannock Falls."/>
+        <img loading="lazy" src="img/01-taughannock.jpg" alt="Taughannock Falls."/>
         <figcaption><span class="num">No. 1</span>Taughannock Falls &mdash; 215 ft, taller than Niagara</figcaption>
       </figure>
       <figure class="essay-photo">
-        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Watkins_Glen_State_Park.jpg/960px-Watkins_Glen_State_Park.jpg" alt="Watkins Glen Gorge."/>
+        <img loading="lazy" src="img/02-watkins-glen.jpg" alt="Watkins Glen Gorge."/>
         <figcaption><span class="num">No. 2</span>Watkins Glen &mdash; North Rim entrance, 2026</figcaption>
       </figure>
       <figure class="essay-photo">
-        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Letchworth_State_Park_in_autumn.JPG/960px-Letchworth_State_Park_in_autumn.JPG" alt="Letchworth State Park."/>
+        <img loading="lazy" src="img/03-letchworth.jpg" alt="Letchworth State Park."/>
         <figcaption><span class="num">No. 3</span>Letchworth &mdash; the Grand Canyon of the East</figcaption>
       </figure>
       <figure class="essay-photo">
-        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Boldt_Castle.jpg/960px-Boldt_Castle.jpg" alt="Boldt Castle."/>
+        <img loading="lazy" src="img/04-boldt-castle.jpg" alt="Boldt Castle."/>
         <figcaption><span class="num">No. 4</span>Boldt Castle &mdash; on Heart Island, by boat</figcaption>
       </figure>
       <figure class="essay-photo">
-        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Lake_Placid_-_Mirror_Lake.jpg/960px-Lake_Placid_-_Mirror_Lake.jpg" alt="Mirror Lake, Lake Placid."/>
+        <img loading="lazy" src="img/05-mirror-lake.jpg" alt="Mirror Lake, Lake Placid."/>
         <figcaption><span class="num">No. 5</span>Mirror Lake, Lake Placid &mdash; 2.7-mi paved loop</figcaption>
       </figure>
       <figure class="essay-photo">
-        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Saratoga_Spa_State_Park.jpg/960px-Saratoga_Spa_State_Park.jpg" alt="Saratoga Spa State Park."/>
+        <img loading="lazy" src="img/06-saratoga-spa.jpg" alt="Saratoga Spa State Park."/>
         <figcaption><span class="num">No. 6</span>Saratoga Spa State Park &mdash; last stop before home</figcaption>
       </figure>
     </div>
@@ -1519,10 +1535,10 @@
         <span class="panel-eyebrow">Group decisions pending</span>
         <h3>The <em>open</em> questions.</h3>
         <ol class="decision-list">
-          <li><span class="q"><b>Dates.</b> May 18&ndash;22 <em>(recommended, default)</em> or May 25&ndash;29.</span></li>
+          <li><span class="q"><b>Dates.</b> <em>Locked: May 21&ndash;25 (Memorial Day weekend)</em>. Lodging will run higher than the pre-holiday week we&rsquo;d analysed; book early.</span></li>
           <li><span class="q"><b>Transport.</b> Minivan + hotels ($3,194) or RV ($3,840&ndash;$4,135).</span></li>
           <li><span class="q"><b>Trip length.</b> The 5-day default, or a 6-day version with a Saratoga overnight.</span></li>
-          <li><span class="q"><b>Day 5 add-on.</b> Veterans Memorial Highway IF open May 22.</span></li>
+          <li><span class="q"><b>Veterans Memorial Highway.</b> Likely open by May 24 &mdash; do it Day 4 afternoon (Lake Placid) rather than Day 5 morning.</span></li>
           <li><span class="q"><b>Lodging picks</b> per town &mdash; shortlist in the Doc.</span></li>
           <li><span class="q"><b>Niagara as a Day 6?</b> ~3½ hr of driving from Letchworth, plus visit time.</span></li>
         </ol>
@@ -1535,7 +1551,7 @@
           <li>
             <span class="who">ORDA &middot; Whiteface highway</span>
             <span class="num">518 · 946 · 2223</span>
-            <span class="why">&mdash; confirm whether Veterans Memorial Highway opens May 22</span>
+            <span class="why">&mdash; confirm Veterans Memorial Highway is open Day 4 afternoon (Sun May 24)</span>
           </li>
           <li>
             <span class="who">Watkins Glen ranger</span>
@@ -1582,7 +1598,7 @@
         <h3><span class="marker glyph">&#215;</span> Closed or pending</h3>
         <ul class="v-list">
           <li><b>Whiteface Cloudsplitter Gondola</b> closed until <b>June 26, 2026</b>.</li>
-          <li><b>Veterans Memorial Highway</b> 2026 opening date unpublished &mdash; historically Memorial Day weekend Friday (= May 22). Call ORDA.</li>
+          <li><b>Veterans Memorial Highway</b> 2026 opening date unpublished &mdash; historically Memorial Day weekend Friday (May 22). Should be open by Sun May 24 / Mon May 25; confirm with ORDA.</li>
           <li><b>Watkins Glen</b> bridge construction through summer 2026 &mdash; North Rim entrance is the workaround.</li>
           <li><b>Saratoga 2026 race meet</b> opens July 3; Belmont Stakes at Saratoga June 6. May trip is clear.</li>
         </ul>
