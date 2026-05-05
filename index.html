@@ -1007,6 +1007,79 @@
       scroll-behavior: auto !important;
     }
   }
+
+  /* Per-day weather chip — populated client-side from Open-Meteo */
+  .day-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.25rem;
+  }
+  .day-top .day-num { flex: 0 0 auto; }
+  .day-weather {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35rem 0.75rem;
+    font-family: var(--display);
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    margin-top: 0.95rem;
+    justify-content: flex-end;
+    text-align: right;
+    max-width: 18rem;
+    flex: 0 1 auto;
+  }
+  .day-weather .label {
+    flex-basis: 100%;
+    font-variation-settings: 'opsz' 24, 'SOFT' 50, 'wght' 600;
+    color: var(--ink);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.74rem;
+    text-align: right;
+  }
+  .day-1 .day-weather .label { color: var(--d1); }
+  .day-2 .day-weather .label { color: var(--d2); }
+  .day-3 .day-weather .label { color: var(--d3); }
+  .day-4 .day-weather .label { color: var(--d4); }
+  .day-5 .day-weather .label { color: var(--d5); }
+  .day-weather .weather-icon {
+    font-size: 1.15rem;
+    line-height: 1;
+  }
+  .day-weather .weather-temp {
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--ink);
+  }
+  .day-weather .weather-precip {
+    color: var(--ink-soft);
+    font-size: 0.88rem;
+  }
+  .day-weather .weather-meta {
+    flex-basis: 100%;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-muted);
+    font-style: italic;
+    text-align: right;
+  }
+  @media (max-width: 879px) {
+    .day-top {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+    .day-weather {
+      margin-top: 0.6rem;
+      justify-content: flex-start;
+      text-align: left;
+      max-width: none;
+    }
+    .day-weather .label,
+    .day-weather .weather-meta { text-align: left; }
+  }
 </style>
 </head>
 <body>
@@ -1311,7 +1384,13 @@
     <!-- DAY 1 -->
     <article class="day-article day-1">
       <div class="day-text">
-        <span class="day-num">01</span>
+        <div class="day-top">
+          <span class="day-num">01</span>
+          <div class="day-weather is-loading" data-lat="42.39" data-lon="-76.45" data-date="2026-05-20" data-place="Ithaca">
+            <span class="label">Forecast &middot; Ithaca</span>
+            <span class="weather-meta">Loading forecast&hellip;</span>
+          </div>
+        </div>
         <div class="day-meta">
           <span><b>Wed</b> May 20</span>
           <span><b>Boston</b> &mdash; <b>Ithaca</b></span>
@@ -1344,7 +1423,13 @@
     <!-- DAY 2 -->
     <article class="day-article day-2 flip">
       <div class="day-text">
-        <span class="day-num">02</span>
+        <div class="day-top">
+          <span class="day-num">02</span>
+          <div class="day-weather is-loading" data-lat="42.59" data-lon="-78.04" data-date="2026-05-21" data-place="Letchworth">
+            <span class="label">Forecast &middot; Letchworth</span>
+            <span class="weather-meta">Loading forecast&hellip;</span>
+          </div>
+        </div>
         <div class="day-meta">
           <span><b>Thu</b> May 21</span>
           <span><b>Ithaca</b> &mdash; <b>Geneseo</b></span>
@@ -1377,7 +1462,13 @@
     <!-- DAY 3 -->
     <article class="day-article day-3">
       <div class="day-text">
-        <span class="day-num">03</span>
+        <div class="day-top">
+          <span class="day-num">03</span>
+          <div class="day-weather is-loading" data-lat="44.32" data-lon="-75.98" data-date="2026-05-22" data-place="Alexandria Bay">
+            <span class="label">Forecast &middot; Alexandria Bay</span>
+            <span class="weather-meta">Loading forecast&hellip;</span>
+          </div>
+        </div>
         <div class="day-meta">
           <span><b>Fri</b> May 22</span>
           <span><b>Geneseo</b> &mdash; <b>Alex&nbsp;Bay</b></span>
@@ -1410,7 +1501,13 @@
     <!-- DAY 4 -->
     <article class="day-article day-4 flip">
       <div class="day-text">
-        <span class="day-num">04</span>
+        <div class="day-top">
+          <span class="day-num">04</span>
+          <div class="day-weather is-loading" data-lat="44.27" data-lon="-73.99" data-date="2026-05-23" data-place="Lake Placid">
+            <span class="label">Forecast &middot; Lake Placid</span>
+            <span class="weather-meta">Loading forecast&hellip;</span>
+          </div>
+        </div>
         <div class="day-meta">
           <span><b>Sat</b> May 23</span>
           <span><b>Alex&nbsp;Bay</b> &mdash; <b>Lake&nbsp;Placid</b></span>
@@ -1443,7 +1540,13 @@
     <!-- DAY 5 -->
     <article class="day-article day-5">
       <div class="day-text">
-        <span class="day-num">05</span>
+        <div class="day-top">
+          <span class="day-num">05</span>
+          <div class="day-weather is-loading" data-lat="43.08" data-lon="-73.78" data-date="2026-05-24" data-place="Saratoga Springs">
+            <span class="label">Forecast &middot; Saratoga Springs</span>
+            <span class="weather-meta">Loading forecast&hellip;</span>
+          </div>
+        </div>
         <div class="day-meta">
           <span><b>Sun</b> May 24 · <em style="color:var(--forest);font-style:italic;letter-spacing:0">home before Memorial Day</em></span>
           <span><b>Lake Placid</b> &mdash; <b>Marlborough</b></span>
@@ -1649,6 +1752,135 @@
     }, { threshold: 0.2 });
     document.querySelectorAll('.map-frame').forEach(el => obs.observe(el));
   }
+
+  // Per-day weather chips — fetched from Open-Meteo on every page load (free, no API key).
+  // Refreshes on every visit, so forecasts auto-update as the trip approaches.
+  (function () {
+    const WMO = {
+      0: ['☀️','Clear'], 1: ['🌤️','Mostly clear'],
+      2: ['⛅','Partly cloudy'], 3: ['☁️','Overcast'],
+      45: ['🌫️','Fog'], 48: ['🌫️','Freezing fog'],
+      51: ['🌦️','Light drizzle'], 53: ['🌦️','Drizzle'], 55: ['🌧️','Heavy drizzle'],
+      61: ['🌦️','Light rain'], 63: ['🌧️','Rain'], 65: ['🌧️','Heavy rain'],
+      71: ['🌨️','Light snow'], 73: ['🌨️','Snow'], 75: ['❄️','Heavy snow'],
+      77: ['🌨️','Snow grains'],
+      80: ['🌦️','Light showers'], 81: ['🌦️','Showers'], 82: ['⛈️','Heavy showers'],
+      85: ['🌨️','Snow showers'], 86: ['🌨️','Heavy snow showers'],
+      95: ['⛈️','Thunderstorm'], 96: ['⛈️','Thunderstorm + hail'], 99: ['⛈️','Severe thunderstorm']
+    };
+    const CACHE_KEY = 'ny-trip-weather-v1';
+    const CACHE_TTL = 15 * 60 * 1000;
+    const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+    const loadCache = () => {
+      try { return JSON.parse(localStorage.getItem(CACHE_KEY)) || {}; }
+      catch (_) { return {}; }
+    };
+    const saveCache = (c) => {
+      try { localStorage.setItem(CACHE_KEY, JSON.stringify(c)); } catch (_) {}
+    };
+
+    const fmtUpdated = (ts) => {
+      const d = new Date(ts);
+      let h = d.getHours(); const m = d.getMinutes();
+      const ap = h >= 12 ? 'PM' : 'AM';
+      h = h % 12 || 12;
+      return `Updated ${MONTHS[d.getMonth()]} ${d.getDate()}, ${h}:${m < 10 ? '0'+m : m} ${ap}`;
+    };
+
+    const daysUntil = (dateStr) => {
+      const target = new Date(dateStr + 'T12:00:00').getTime();
+      return Math.ceil((target - Date.now()) / 86400000);
+    };
+
+    const labelHtml = (el) => {
+      const place = el.dataset.place || '';
+      return '<span class="label">Forecast' + (place ? ' &middot; ' + place : '') + '</span>';
+    };
+
+    const render = (el, data, ts) => {
+      const [icon, label] = WMO[data.code] || ['•','—'];
+      el.classList.remove('is-loading','is-error','is-pending');
+      el.innerHTML =
+        labelHtml(el) +
+        `<span class="weather-icon" title="${label}">${icon}</span>` +
+        `<span class="weather-temp">${Math.round(data.tmax)}° / ${Math.round(data.tmin)}°</span>` +
+        `<span class="weather-precip">${Math.round(data.precip)}% rain</span>` +
+        `<span class="weather-meta">${label} · ${fmtUpdated(ts)}</span>`;
+    };
+
+    const renderPending = (el, days) => {
+      el.classList.remove('is-loading','is-error');
+      el.classList.add('is-pending');
+      const wait = Math.max(1, days - 16);
+      el.innerHTML =
+        labelHtml(el) +
+        `<span class="weather-meta">Available closer to the trip — check back in ${wait} day${wait === 1 ? '' : 's'}.</span>`;
+    };
+
+    const renderError = (el) => {
+      el.classList.remove('is-loading','is-pending');
+      el.classList.add('is-error');
+      el.innerHTML =
+        labelHtml(el) +
+        '<span class="weather-meta">Forecast unavailable right now.</span>';
+    };
+
+    const buildUrl = (lat, lon, date) =>
+      'https://api.open-meteo.com/v1/forecast' +
+      `?latitude=${lat}&longitude=${lon}` +
+      '&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weathercode' +
+      '&temperature_unit=fahrenheit&timezone=America%2FNew_York' +
+      `&start_date=${date}&end_date=${date}`;
+
+    const parseDaily = (j) => {
+      if (!j || !j.daily || !j.daily.time || !j.daily.time.length) return null;
+      return {
+        tmax: j.daily.temperature_2m_max[0],
+        tmin: j.daily.temperature_2m_min[0],
+        precip: j.daily.precipitation_probability_max[0] || 0,
+        code: j.daily.weathercode[0]
+      };
+    };
+
+    const fetchForecast = (el, cache, isRetry) => {
+      const lat = el.dataset.lat, lon = el.dataset.lon, date = el.dataset.date;
+      const key = `${lat},${lon},${date}`;
+      const days = daysUntil(date);
+
+      if (days > 16) { renderPending(el, days); return; }
+
+      const hit = cache[key];
+      if (!isRetry && hit && (Date.now() - hit.t) < CACHE_TTL) {
+        render(el, hit.data, hit.t);
+        return;
+      }
+
+      fetch(buildUrl(lat, lon, date))
+        .then(r => r.json().then(j => ({ ok: r.ok, status: r.status, body: j })))
+        .then(res => {
+          // Out-of-horizon: API returns 400 with reason "...out of allowed range..."
+          if (!res.ok) {
+            const reason = (res.body && res.body.reason) || '';
+            if (/out of allowed range/i.test(reason)) { renderPending(el, days); return; }
+            throw new Error('HTTP ' + res.status + ': ' + reason);
+          }
+          const data = parseDaily(res.body);
+          if (!data) { renderPending(el, days); return; }
+          const t = Date.now();
+          cache[key] = { t, data };
+          saveCache(cache);
+          render(el, data, t);
+        })
+        .catch(() => {
+          renderError(el);
+          if (!isRetry) setTimeout(() => fetchForecast(el, cache, true), 3000);
+        });
+    };
+
+    const cache = loadCache();
+    document.querySelectorAll('.day-weather').forEach(el => fetchForecast(el, cache, false));
+  })();
 </script>
 
 </body>
